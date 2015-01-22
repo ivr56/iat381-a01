@@ -1,11 +1,6 @@
 'use strict';
 
 var gulp = require('gulp');
-var browserify = require('browserify');
-var gutil = require('gulp-util');
-var plumber   = require('gulp-plumber');
-var webserver = require('gulp-webserver');
-var opn       = require('opn');
 
 gulp.paths = {
   src: 'src',
@@ -14,14 +9,15 @@ gulp.paths = {
   e2e: 'e2e'
 };
 
+require('require-dir')('./gulp');
 
-
-gulp.task('webserver', function() {
-  gulp.src( 'dist/.' )
-    .pipe(webserver({
-      livereload:       true,
-      directoryListing: false
-    }));
+gulp.task('default', ['clean'], function () {
+    gulp.start('build');
 });
+
+
+
+
+
 
 

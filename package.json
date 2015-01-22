@@ -1,7 +1,9 @@
 {
   "name": "iat381A01",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-clean": "^0.3.1"
+  },
   "devDependencies": {
     "browser-sync": "~1.7.1",
     "chalk": "~0.5.1",

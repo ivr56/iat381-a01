@@ -9,7 +9,7 @@
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="app/index.css">
+    
     <!-- bower:css -->
     <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
     <!-- endbower -->
@@ -25,13 +25,14 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+      <script src="app/index.js"></script>
+       
     <div class="container" ng-controller="MainCtrl">
     
-      <div ng-include="components/navbar/navbar.html"></div>
+      <div ng-include="'components/navbar/navbar.html'"></div>
     
       <div class="jumbotron text-center">
-        <h1>'Allo, 'Allo!</h1>
+        <h1>'Allo2, 'Allo2!</h1>
         <p class="lead">
           <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
           Always a pleasure scaffolding your apps.
