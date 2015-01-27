@@ -10,8 +10,8 @@ var $ = require('gulp-load-plugins')({
 
 gulp.task('partials', function () {
   return gulp.src([
-    paths.src + '/{app,components}/**/*.html',
-    paths.tmp + '/{app,components}/**/*.html'
+    paths.src + '/{app,components, navbar, controllers, main}/**/*.html',
+    paths.tmp + '/{app,components, navbar, controllers, main}/**/*.html'
   ])
     .pipe($.minifyHtml({
       empty: true,
@@ -32,7 +32,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     addRootSlash: false
   };
 
-  var htmlFilter = $.filter('*.html');
+  var htmlFilter = $.filter('**/*.html');
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
   var assets;
@@ -50,8 +50,10 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe(cssFilter.restore())
     .pipe(assets.restore())
     .pipe($.useref())
+    .pipe()
     .pipe($.revReplace())
     .pipe(htmlFilter)
+    
     .pipe($.minifyHtml({
       empty: true,
       spare: true,
@@ -79,8 +81,18 @@ gulp.task('misc', function () {
     .pipe(gulp.dest(paths.dist + '/'));
 });
 
+gulp.task('misc2', function () {
+  return gulp.src(paths.src + '/app/controllers/*.js')
+    .pipe(gulp.dest(paths.dist + '/'));
+});
+
+gulp.task('misc3', function () {
+  return gulp.src(paths.src + '/views/*.html')
+    .pipe(gulp.dest(paths.dist + '/views/'));
+});
+
 gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'misc']);
+gulp.task('build', ['html', 'images', 'fonts', 'misc', 'misc2', 'misc3']);
