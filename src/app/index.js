@@ -13,7 +13,10 @@ angular.module('iat381A01',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-  
+       .when('/q1', {
+        templateUrl: 'views/q1.html',
+        controller: 'Q1Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
