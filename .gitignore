@@ -2,6 +2,5 @@ node_modules/
 bower_components/
 .sass-cache/
 .tmp/
-dist/
 gulp-angular-tempaltecache/
-gulp=dev-replace/
+gulp-dev-replace/
