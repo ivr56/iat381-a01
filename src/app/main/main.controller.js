@@ -61,4 +61,5 @@ angular.module('iat381A01')
     angular.forEach($scope.awesomeThings, function(awesomeThing) {
       awesomeThing.rank = Math.random();
     });
+    
   });
