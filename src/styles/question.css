@@ -1,11 +1,17 @@
 .questionContainer{
+	display: block;
+	height: 60%;
+	padding: 10px;
+}
+
+.answerContainer{
+	display: block;
+	height: 40%;
 
 }
 
 .answerContainer{
 
-}
-
-.answerContainer{
-	
+	display: block;
+	width: 50%;
 }
