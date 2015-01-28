@@ -1,4 +1,8 @@
- <div class="jumbotron text-center">
+<head> 
+<!--- Angular Material -->
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material/min.css"> 
+</head>
+<div class="jumbotron text-center">
      <script src="../app/logic/logic_temp.js">
     
      </script>
@@ -15,8 +19,13 @@
         </p>
        
            
-       <p><a id="btn_01" class="btn btn-lg btn-success" ng-href="#/q1">Stark</a></p>
-       <p><a class="btn btn-lg btn-success" ng-href="#/q1">Bill</a></p>
-       <p><a class="btn btn-lg btn-success" ng-href="#/q1">Bob</a></p>
-       <p><a class="btn btn-lg btn-success" ng-href="#/q1">Dadelus</a></p>
+       <!--- Start btn group --->
+<div ng-controller="AppCtrl">
+    <md-content>
+    <section layoutt="row" layout-sm="column" layout-align="center center">
+        <md-button>Rob Stark</md-button>
+        </section>    
+    </md-content>
+    </div>
+      <!--- End btn group --->
       </div>
