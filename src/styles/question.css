@@ -8,16 +8,25 @@
 	display: block;
 	height: 40%;
 
+
 }
 
-.answerContainer{
+.answerBlock{
 
-
+	background-color: #333;
+	border: 1px solid #fff;
 	display: block;
 	width: 50%;
 }
 
-	
+.correct{
+
+	border: 1px solid #009966;
+}
+
+.incorrect{
+	border: 1px solid #780000;
+}	
 
 
 .buttondemoBasicUsage {
