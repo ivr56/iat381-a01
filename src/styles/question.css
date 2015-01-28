@@ -19,6 +19,7 @@
 	width: 50%;
 }
 
+<<<<<<< HEAD
 .correct{
 
 	border: 1px solid #009966;
@@ -27,6 +28,12 @@
 .incorrect{
 	border: 1px solid #780000;
 }	
+=======
+.btn-lg {
+background-color: #000;
+}
+	
+>>>>>>> 1eb96f80fcfe92c5f9748e21e34520aea0b0dad0
 
 
 .buttondemoBasicUsage {

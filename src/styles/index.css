@@ -1,0 +1,18 @@
+body{ background-color: #000;}
+
+.container p{
+    color: #e60b0b
+    
+}
+
+
+.btn {
+background-color: #000;
+    
+}
+
+.btn:hover{
+ background-color: #ff0000;   
+}
+
+	
