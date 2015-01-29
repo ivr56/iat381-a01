@@ -20,15 +20,18 @@
 
     <!-- build:css({.tmp/serve,src}) styles/app.css -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="app/index.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/question.css">
+    <link rel="stylesheet" href="styles/result.css">
     <!-- endinject -->
     <!-- endbuild -->
     <!--- End Mess -->  
       
   
     
-        <link rel="stylesheet" href="../styles/index.css">
-       <link rel="stylesheet" href="../styles/question.css">
+        <link rel="stylesheet" href="/styles/index.css">
+       <link rel="stylesheet" href="/styles/question.css">
     </head>
   <body>
     <!--[if lt IE 10]>
@@ -43,7 +46,7 @@
     <div class="container" ng-controller="MainCtrl">
     
         <!--- Universial Nav Remove Start -->
-      <div ng-include="'components/navbar/navbar.html'"></div>
+
        <!--- Universial Nav Remove End -->
   
       <!-- View Start Module -->
@@ -88,14 +91,18 @@
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
     <script src="app/index.js"></script>
-    <script src="components/navbar/navbar.controller.js"></script>
     <script src="app/main/main.controller.js"></script>
     <script src="app/logic/results.js"></script>
     <script src="app/logic/quizservice.js"></script>
+    <script src="app/logic/quizcalculator.js"></script>
+    <script src="app/logic/quizans_factory.js"></script>
     <script src="app/logic/questionui.js"></script>
+    <script src="app/logic/question_1.js"></script>
     <script src="app/logic/logic_temp.js"></script>
+    <script src="app/controllers/results.js"></script>
     <script src="app/controllers/q1.js"></script>
     <script src="app/controllers/about.js"></script>
+    <script src="components/navbar/navbar.controller.js"></script>
     <!-- endinject -->
 
     <!-- inject:partials -->
