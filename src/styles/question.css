@@ -7,6 +7,7 @@
 .answerContainer{
 	display: block;
 	height: 40%;
+	width: 100%;
 
 
 }
@@ -23,11 +24,11 @@
 
 .correct{
 
-	border: 1px solid #009966;
+	
 }
 
 .incorrect{
-	border: 1px solid #780000;
+	
 }	
 
 .answerRow{
@@ -43,14 +44,20 @@ background-color: #000;
 width: 100%;
 height:80px;
 border-radius: 0 !important;
+border: 1px solid #194775;
     
 }
 
 .btn:hover{
- background-color: #333;   
+ background-color: #194775;   
+ border: 1px solid #194775;
 }
-
-
+.jumbotron{
+	padding: 0;
+}
+.container .jumbotron{
+	padding: 0;
+}
 
 .buttondemoBasicUsage {
   /** From vulcanized demo **/ }
