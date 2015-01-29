@@ -4,21 +4,22 @@
 angular.module('iat381A01' ).controller('QCtrl', function ($scope, quizservice) {
   $scope.name = '2';
     
-  $scope.onA1 = function(quizservice) 
+  $scope.onA1 = function() 
   {
       console.log("Checked");
-       $scope.name = '100';    
+       $scope.name = 'Answered 1';
+          quizservice.property.data = 'Angular Service Recieves #1';
+        $scope.services = quizservice.property;
   }
   
   
-   $scope.onA2 = function(quizservice)
+   $scope.onA2 = function()
   {
       console.log("Checked");
-       $scope.name = '250';
-            document.getElementById('q1_head').innerHTML='---meets---';
+       $scope.name = 'Answered 2';
+       quizservice.property.data = 'Correct';
+        $scope.services = quizservice.property;
 
-       $scope.name = sharedProperties.test ;
-  
   }
     
    
@@ -26,8 +27,9 @@ angular.module('iat381A01' ).controller('QCtrl', function ($scope, quizservice) 
    $scope.onA3 = function()
   {
       console.log("Checked");
-       $scope.name = '300';
-      document.getElementById('q1_head').innerHTML='---present---';
+       $scope.name = 'Answered 3';
+            quizservice.property.data = 'Angular Service Recieves #3';
+        $scope.services = quizservice.property;
     
   }
    
@@ -37,8 +39,9 @@ angular.module('iat381A01' ).controller('QCtrl', function ($scope, quizservice) 
    $scope.onA4 = function()
   {
       console.log("Checked");
-       $scope.name = '400';
-      document.getElementById('q1_head').innerHTML='---now---';
+       $scope.name = 'Answered 4';
+          quizservice.property.data = 'Angular Service Recieves #4';
+        $scope.services = quizservice.property;
     
   }
    

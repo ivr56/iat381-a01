@@ -10,14 +10,6 @@ if (response_1 > 0)
      
 }
 
-//document.getElementById('btn_01').onclick //= function() 
-//{
-        
-//document.getElementById('q1_head').innerHT//ML='---future---';
-    
-    
-//};
-//
 
 
 
