@@ -3,6 +3,7 @@ body{
 	background-image:url('../img/GOTfooterbg.jpg');
 	background-position: top;
 	background-repeat: no-repeat;
+	background-size:cover;
 	
 	font-family: "Baskerville";
 	font-size: 14px;

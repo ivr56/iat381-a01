@@ -15,11 +15,12 @@
 
 	background-color: #333;
 	border: 1px solid #fff;
-	display: block;
-	width: 50%;
+	display: inline-block;
+	width: 49%;
+	height:80px;
 }
 
-<<<<<<< HEAD
+
 .correct{
 
 	border: 1px solid #009966;
@@ -28,12 +29,27 @@
 .incorrect{
 	border: 1px solid #780000;
 }	
-=======
+
+.answerRow{
+	width: 100%;
+}
+
 .btn-lg {
 background-color: #000;
 }
-	
->>>>>>> 1eb96f80fcfe92c5f9748e21e34520aea0b0dad0
+
+.btn {
+background-color: #000;
+width: 100%;
+height:80px;
+border-radius: 0 !important;
+    
+}
+
+.btn:hover{
+ background-color: #333;   
+}
+
 
 
 .buttondemoBasicUsage {
