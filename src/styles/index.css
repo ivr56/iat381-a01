@@ -1,4 +1,30 @@
-body{ background-color: #000;}
+body{ 
+	background-color: #000;
+	background-image:url('../img/GOTfooterbg.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	
+	font-family: "Baskerville";
+	font-size: 14px;
+
+}
+
+.jumbotron{
+	position: absolute;
+	bottom:10px;
+	left:0;
+	width: 100%;
+
+}
+
+
+.subtitle h2{
+	display: inline;
+	margin: 0;
+	color: #aaa;
+}
+
+
 
 .container p{
     color: #e60b0b
