@@ -42,4 +42,33 @@ background-color: #000;
  background-color: #ff0000;   
 }
 
+p.normaltext{
+	color: #333;
+}
+
+
+.imgbutton{
+  width:32%%;
+  height: 180px;
+  background-image: url("../img/stark.jpg");
+}
+
+.imgtext{
+  width:160px;
+  height:40px;
+  background: #722E31;
+  opacity: 0;
+
+
+
+}
+
+.imgbutton:hover .imgtext{
+  opacity: 0.5;
+  text-align: top;
+  color: #fff;
+  font-size: 18px;
+  padding: 80px;
+  font-weight: 700;
+}
 	
