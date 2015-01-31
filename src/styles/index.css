@@ -1,6 +1,6 @@
 body{ 
 	background-color: #000;
-	background-image:url('../img/GOTfooterbg.jpg');
+	/*background-image:url('../img/GOTfooterbg.jpg');*/
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size:cover;
@@ -48,18 +48,33 @@ p.normaltext{
 
 
 .imgbutton{
-  width:32%%;
+  width:160px;
   height: 180px;
   background-image: url("../img/stark.jpg");
+  display: inline-block;
+}
+.imgbutton1{
+  width:160px;
+  height: 180px;
+  background-image: url("../img/lannister.jpg");
+  display: inline-block;
 }
 
 .imgtext{
   width:160px;
-  height:40px;
+  height:180px;
   background: #722E31;
   opacity: 0;
+  display: inline-block;
 
+}
 
+.imgtext1{
+  width:160px;
+  height:180px;
+  background: #722E31;
+  opacity: 0;
+  display: inline-block;
 
 }
 
@@ -68,7 +83,19 @@ p.normaltext{
   text-align: top;
   color: #fff;
   font-size: 18px;
-  padding: 80px;
+  padding: 50px;
   font-weight: 700;
+  display: inline-block;
 }
+
+.imgbutton1:hover .imgtext1{
+  opacity: 0.5;
+  text-align: top;
+  color: #fff;
+  font-size: 18px;
+  padding: 50px;
+  font-weight: 700;
+  display: inline-block;
+}
+
 	
