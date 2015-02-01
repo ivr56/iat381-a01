@@ -7,7 +7,7 @@
        
     $scope.rs = function()
     {
-   $rootScope.quizset = Math.floor((Math.random() * 10) + 1);;
+   $rootScope.quizset = Math.floor((Math.random() * 10) + 1);
       console.log("Quiz Reset with #: " + $rootScope.quizset); 
     $rootScope.answered = 0;
     $rootScope.score = 0;
