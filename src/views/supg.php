@@ -1,5 +1,18 @@
 
-<div class="signuppg">
+<html class="no-js" ng-app="iat381A01">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <link rel="stylesheet" href="styles/question.css" type="text/css" media="screen">
+</head>
+
+
+
+<body>
+    
+<div ng-controller="supgCtrl" class="jumbotron text-center">
+    <div class="signuppg">
 	<div id="headtext">
 			<div class="jumbotron text-center">
 			<img src="img/logoGOT.png" alt="logoGoT" width="80%"> 
@@ -51,3 +64,20 @@
       </div>
      
      </div> 
+
+     </body> 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
