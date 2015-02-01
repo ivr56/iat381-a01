@@ -9,7 +9,6 @@
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-      
 
     <!--- Dont Touch this mess Below -->    
     <!-- bower:css -->
@@ -26,8 +25,6 @@
       
   
     
-        <link rel="stylesheet" href="/styles/index.css">
-       <link rel="stylesheet" href="/styles/question.css">
     </head>
   <body ng-app="iat381-a01">
     <!--[if lt IE 10]>
@@ -35,24 +32,13 @@
     <![endif]-->
       
        
-    <div class="container">
     <h1>Hello Internet!</h1>
     <h2>Score:</h2>
-    <h3>{{score}} with Quiz #{{quiznumber}}</h3>
+    <h3>{{score}}</h3>
     <div class="container">
       <div ng-view=""></div>
     </div>
-   
-      <script src="app/index.js"></script>
-
-    
-   
-<!-- Universial Footer Start Module --> 
-      <div class="footer">
-      </div>
-<!-- Universial Footer End Module -->   
-
-    </div>
+  </body>
       
       
       
