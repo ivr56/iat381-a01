@@ -1,6 +1,9 @@
 <head>
 <style>
-
+.imageblock
+    {
+    }
+    
     
     </style>
 </head>
@@ -9,7 +12,15 @@
     Question Number: {{questionnumber}}
   </div>
     
-    <div ng-include=""></div>
+  <div  ng-controller="imagecontroller">
+    <a ng-click="prevButton()">prevButton</a>
+    <img ng-src="{{availableImages[currentImage].src}}"/>
+    <a ng-click="nextButton()">nextButton</a>
+    <br/>
+    currentImage: {{currentImage}}
+</div>
+    
+    </div> 
     <!--- New Div for Images - Ivor --->
     <div class='questioncontainer_txt'>
         {{question}}

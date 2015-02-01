@@ -4,9 +4,8 @@
     .controller('questionscontroller', function($scope,$rootScope, $routeParams,$location, quizservice) {
       var question = quizservice.getquestion(parseInt($routeParams.questionId));
  
-  
-        
-    
+       
+       
       if (question === null) {
           $location.path( '/result/' );
       } 
@@ -17,11 +16,8 @@
       $scope.question = question.Question;
       $scope.answers = question.Answers;
       $scope.check = question.CheckId;
-          
-
-
-  
-      
+      $scope.deck = question.imagesrc;
+       
       //Change Markup 
       $scope.answerquestion = function(answerid, answer, checking) {
         console.log("user answered with: " + answerid);

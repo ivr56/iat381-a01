@@ -18,7 +18,7 @@
           QuestionId:1, 
           Question:"Buy Power?",
           CheckId: 2,
-          imageSRC: 'img/tpi_1.png',
+          imagesrc:"img/tpi_1.png",
           Answers: [
             {AnswerId:1, Answer:"Now"},
             {AnswerId:2, Answer:"Your"},
@@ -29,7 +29,7 @@
           QuestionId:2, 
           Question:"Hello?",
           CheckId: 2,   
-          imageSRC: 'img/tpi_2.png',
+          imagesrc: 'img/tpi_2.png',
           Answers: [
             {AnswerId:1, Answer:"Good"},
             {AnswerId:2, Answer:"Luck"},
