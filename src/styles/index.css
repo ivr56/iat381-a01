@@ -14,19 +14,25 @@ body{
 .signuppg .jumbotron{
 	position: relative;
 	top:180px;
-	width: 60%;
+	width: 70%;
 	margin-right: auto;
 	margin-left: auto;
+	
+	height: 180px;
 }
 
 .signuppg .jumbotron .btn{
-	border: 0;
-	background-color: #722E31;
+	border: 1px solid #eee;
+	background-color: #fff;
+	color: #0C46A0;
+	width: 40%;
+	display: inline-block;
+	height: 45px;
 }
 
 .signuppg .jumbotron .btn:hover{
 	border: 0;
-	background-color: #3b181a;
+	background-color: #eee;
 }
 
 
@@ -40,6 +46,8 @@ body{
 	bottom:10px;
 	left:0;
 	width: 100%;
+	 border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
 
 }
 
@@ -127,6 +135,8 @@ input{
 	margin:10px 0 10px 0;
 	height: 40px;
 	border: 0;
+	width: 80%;
+
 }
 
 input[type="submit"]{

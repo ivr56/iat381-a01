@@ -13,13 +13,15 @@
 
 
 
-  <!--- Timer script links -->  
+  <!--- Irene's Timer script links -->  
        
     <script src="/bower_components/jquery/jquery.min.js"></script>
     <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/bower_components/bootstrap/docs/assets/js/bootstrap.min.js"></script>
     <script src="/app/js/timer.js"></script>
    <!--- <script src="/docs/docs.js"></script>--> 
+
+     <!--- END OF Irene's Timer script links -->  
 
     <!--- Dont Touch this mess Below -->    
     <!-- bower:css -->
@@ -42,9 +44,11 @@
 
 <body>
 
- <!-- Timer section-->
+ <!-- Irene's Timer section-->
     <div class="quizheader">
-
+         <div>
+      Question Number: {{questionnumber}}
+    </div>
         <div class="bs-docs-example">
             
 
@@ -54,7 +58,15 @@
            
         </div>
      </div>   
+
+      <!-- END OF Irene's Timer section-->
    
+<div class="quizpgcontainer">
+<!-- added/change class name-->
+<div class="jumbotron text-center">
+
+ <div class="imgblock">
+  <img src="http://www.pagetopremiere.com/wp-content/uploads/2014/03/Jon-Snow-Game-Of-Thrones.jpg" width="100%" alt="placeholder img" height="60%"></div>
 
   <div class="questionContainer">
     <div>
@@ -63,26 +75,26 @@
     <!-- added/change class name-->
     <div>
       <h2>{{question}}</h2>
-      <div class="imgblock"><img src="/img/stark.jpg"></div>
+     
     </div>
-</div>
-<!-- added/change class name-->
-<div class="jumbotron text-center">
-        <div>
-          <h3>Select Answer:</h3>
-      </div>
-  <!-- added/change class name-->
+
+
+  <!-- Irene: added/change class name-->
   <div class="answerContainer">
     <a 
       ng-repeat="answer in answers" 
       style="display:block; color:blue" 
       ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">
       
-      <!-- added/change class name-->
+      <!-- Irene: added/change class name-->
       <p class="answerBlock">{{answer.AnswerId}} - {{answer.Answer}}</p>
       <p class='test'>{{check}}</p>
     </a>
   </div>
+</div>
+
+</div>
+   
 
 </div>
 
