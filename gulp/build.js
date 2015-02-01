@@ -86,25 +86,29 @@ gulp.task('icos', function () {
 
 gulp.task('controllers', function () {
   return gulp.src(paths.src + '/app/controllers/*.js')
-    .pipe(gulp.dest(paths.dist + '/'));
+    .pipe(gulp.dest(paths.dist + '/controllers/'));
 });
 gulp.task('javascripts', function () {
-  return gulp.src(paths.src + '/app/logic/*.js')
-    .pipe(gulp.dest(paths.dist + '/'));
+  return gulp.src(paths.src + '/app/*.js')
+    .pipe(gulp.dest(paths.dist + '/js/'));
 });
 
 gulp.task('htmlviews', function () {
   return gulp.src(paths.src + '/views/*.html')
     .pipe(gulp.dest(paths.dist + '/views/'));
 });
+gulp.task('htmlall', function () {
+  return gulp.src(paths.src + '/*.html')
+    .pipe(gulp.dest);
+});
+
 gulp.task('cssviews', function () {
   return gulp.src(paths.src + '/styles/*.css')
     .pipe(gulp.dest(paths.dist + '/styles/'));
 });
 
-
 gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
-gulp.task('build', ['html', 'images_png', 'images_jpg', 'fonts', 'javascripts', 'htmlviews', 'cssviews', 'controllers', 'icos']);
+gulp.task('build', ['html', 'images_png', 'images_jpg', 'fonts', 'javascripts', 'htmlviews', 'cssviews', 'controllers', 'icos', 'htmlall']);

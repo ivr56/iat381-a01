@@ -1,12 +1,29 @@
+<head>
+<style>
+
+    
+    </style>
+</head>
 <div>
   <div>
     Question Number: {{questionnumber}}
   </div>
+    
+    <div ng-include=""></div>
+    <!--- New Div for Images - Ivor --->
+    <div class='questioncontainer_txt'>
+        {{question}}
+    </div>
+        <!--- Additon of Image Array End --->
   <div>
-    {{question}}
+
+    
   </div>
   <div>
-    <a 
+
+      
+       <!--- Defult--->
+      <a 
       ng-repeat="answer in answers" 
       style="display:block; color:blue" 
       ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">
@@ -14,6 +31,7 @@
       <p>{{answer.AnswerId}} - {{answer.Answer}}</p>
       <p class='test'>{{check}}</p>
     </a>
+    <!--- Defult--->
   </div>
 
 </div>
