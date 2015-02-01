@@ -55,7 +55,7 @@
 			}
 
 		?>
-		 <p class="normaltext">Choose your theme</p>
+ <p class="normaltext">Choose your theme</p>
 		       
 		        <a href="#">
 		          <div class="imgbutton">
