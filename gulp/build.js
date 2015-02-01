@@ -79,15 +79,18 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(paths.dist + '/fonts/'));
 });
 
-gulp.task('icos', function () {
-  return gulp.src(paths.src + '/**/*.ico')
-    .pipe(gulp.dest(paths.dist + '/'));
-});
+
 
 gulp.task('controllers', function () {
   return gulp.src(paths.src + '/app/controllers/*.js')
     .pipe(gulp.dest(paths.dist + '/controllers/'));
 });
+
+gulp.task('lumxframework', function () {
+  return gulp.src(paths.src + '/app/scripts/*.js')
+    .pipe(gulp.dest(paths.dist + '/scripts/'));
+});
+
 gulp.task('javascripts', function () {
   return gulp.src(paths.src + '/app/*.js')
     .pipe(gulp.dest(paths.dist + '/js/'));
@@ -111,4 +114,4 @@ gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
-gulp.task('build', ['html', 'images_png', 'images_jpg', 'fonts', 'javascripts', 'htmlviews', 'cssviews', 'controllers', 'icos', 'htmlall']);
+gulp.task('build', ['html', 'images_png', 'images_jpg', 'fonts', 'javascripts', 'htmlviews', 'cssviews', 'controllers', 'lumxframework', 'htmlall']);
