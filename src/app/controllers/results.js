@@ -1,17 +1,8 @@
-'use strict';
-
-/**
- * @ngdoc function
- * @name myappApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the myappApp
- */
-angular.module('iat381A01')
-  .controller('rCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  
+    //------------------
+    //Result Controller
+   angular.module('iat381-a01')   
+    .controller('resultcontroller', function($scope) {
+      $scope.text = "hello";
+    })
+     

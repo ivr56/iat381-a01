@@ -1,38 +1,41 @@
-'use strict';
 
-angular.module('iat381A01', 
-               ['ngAnimate', 'ngRoute','ngCookies', 'ngTouch', 'ngSanitize', 'ui.bootstrap', ])
+  //------------------
+  //Index.js Start
+  //Angualr Start
+  angular.module('iat381-a01')
+  
+    .config(['$routeProvider', 
+        function($routeProvider) {
+          $routeProvider.
+            when('/result', {
+              templateUrl: 'result.html',
+              controller: 'resultcontroller'
+            }).
+            when('/questions/:questionId', {
+              templateUrl: 'questions.html',
+              controller: 'questionscontroller'
+            }).
+            
+            when('/', {
+              templateUrl: 'log.html',
+              controller: 'logcontroller'
+            }).
+            
+            when('/q1', {
+                redirectTo: '/questions/0'
+            }).
+            
+            otherwise({
+              redirectTo: '/'
+            });
+        }])
+        
 
-//Route Provider
-//When
-//Local URL
-//Controller Name
-
-.config(function ($routeProvider) {
-    $routeProvider
-    //Landing Page
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-    //About Quiz Page
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-    //Questions Begin 
-       .when('/q1', {
-        templateUrl: 'views/q1.html',
-        controller: 'Q1Ctrl'
-      })
-    
-    //Questions End
-    
-    
-    
-    //Defult Fallback
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
-
+    .run(function ($rootScope) {
+    $rootScope.score = 0; //global variable for score
+    $rootScope.corrected = 0; //global variable for corrected
+    $rootScope.quizset = 0;
+  
+    })
+    //End Index.js
+    //------------------
