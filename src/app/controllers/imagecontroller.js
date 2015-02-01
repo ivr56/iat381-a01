@@ -25,6 +25,7 @@ function Ctrl($scope, $rootScope) {
 
     if ($rootScope.answered === 1)
     {
+        
     $scope.currentImage++;
     if ($scope.currentImage > ($scope.availableImages.length - 1)) {
       $scope.currentImage = 0;
