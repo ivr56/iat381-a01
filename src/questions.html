@@ -37,7 +37,9 @@
       <a 
       ng-repeat="answer in answers" 
       style="display:block; color:blue" 
-      ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">
+      ng-click="answerquestion(answer.AnswerId, answer.Answer, check)"
+      ng-click="answered()"    
+         >
       
       <p>{{answer.AnswerId}} - {{answer.Answer}}</p>
       <p class='test'>{{check}}</p>

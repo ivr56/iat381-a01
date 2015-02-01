@@ -5,10 +5,13 @@
 
 angular.module('iat381-a01')
 .controller('imagecontroller',
-function Ctrl($scope) {
+function Ctrl($scope, $rootScope) {
   $scope.currentImage = 0;
-
-  $scope.availableImages = [
+    
+    if ($rootScope.quizset > 5)
+    {
+    //Set #1 Image Start
+    $scope.availableImages = [
     {
       src: "img/tpi_3.png"
     },
@@ -20,19 +23,46 @@ function Ctrl($scope) {
     }
     ];
 
-  $scope.nextButton = function() {
+    if ($rootScope.answered === 1)
+    {
     $scope.currentImage++;
     if ($scope.currentImage > ($scope.availableImages.length - 1)) {
       $scope.currentImage = 0;
+           console.log("Changed Image");
+        $rootScope.answered = 0;
+    }    
     }
-  }
+    }
+ //Set #1 Image End
+    else
+    {
+    //Set #1 Image Start
+    $scope.availableImages = [
+    {
+      src: "img/tpi_1.png"
+    },
+    {
+      src: "img/tpi_2.png"
+    },
+    {
+      src: "img/tpi_3.png"
+    }
+    ];
 
-  $scope.prevButton = function() {
-    $scope.currentImage--;
-    if ($scope.currentImage < 0) {
-      $scope.currentImage = ($scope.availableImages.length - 1);
+    if ($rootScope.answered === 1)
+    {
+    $scope.currentImage++;
+    if ($scope.currentImage > ($scope.availableImages.length - 1)) {
+      $scope.currentImage = 0;
+           console.log("Changed Image");
+        $rootScope.answered = 0;
+    }    
     }
-  }
+    }
+
+    
+
+   
   
 })
   //End Image Controller

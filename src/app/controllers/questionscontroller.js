@@ -17,7 +17,6 @@
       $scope.answers = question.Answers;
       $scope.check = question.CheckId;
       $scope.deck = question.imagesrc;
-       
       //Change Markup 
       $scope.answerquestion = function(answerid, answer, checking) {
         console.log("user answered with: " + answerid);
@@ -41,6 +40,10 @@
         ///Next Question
         var nextQuestionId = parseInt($routeParams.questionId) + 1;
         $location.path( '/questions/' + nextQuestionId );
+        $rootScope.answered = 1;
+          
+          
+    
       };
       
       
