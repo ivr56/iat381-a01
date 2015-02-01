@@ -1,0 +1,19 @@
+<div>
+  <div>
+    Question Number: {{questionnumber}}
+  </div>
+  <div>
+    {{question}}
+  </div>
+  <div>
+    <a 
+      ng-repeat="answer in answers" 
+      style="display:block; color:blue" 
+      ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">
+      
+      <p>{{answer.AnswerId}} - {{answer.Answer}}</p>
+      <p class='test'>{{check}}</p>
+    </a>
+  </div>
+
+</div>

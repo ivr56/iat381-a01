@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" ng-app="iat381A01">
+<html>
   <head>
     <meta charset="utf-8">
     <title>iat381A01</title>
@@ -10,9 +10,7 @@
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
       
-    <!--- Angular Material -->
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material/min.css">
-      
+
     <!--- Dont Touch this mess Below -->    
     <!-- bower:css -->
     <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
@@ -31,33 +29,28 @@
         <link rel="stylesheet" href="/styles/index.css">
        <link rel="stylesheet" href="/styles/question.css">
     </head>
-  <body>
+  <body ng-app="iat381-a01">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
       
-      
-      
-      
-      <script src="app/index.js"></script>
        
-    <div class="container" ng-controller="MainCtrl">
-    
-        <!--- Universial Nav Remove Start -->
-
-       <!--- Universial Nav Remove End -->
-  
-      <!-- View Start Module -->
+    <div class="container">
+    <h1>Hello Internet!</h1>
+    <h2>Score:</h2>
+    <h3>{{score}} with Quiz #{{quiznumber}}</h3>
+    <div class="container">
       <div ng-view=""></div>
-      <!-- View End Module --> 
+    </div>
+   
+      <script src="app/index.js"></script>
 
     
    
-       <!-- Universial Footer Start Module --> 
+<!-- Universial Footer Start Module --> 
       <div class="footer">
-       
       </div>
-     <!-- Universial Footer End Module -->   
+<!-- Universial Footer End Module -->   
 
     </div>
       
