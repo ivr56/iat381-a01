@@ -97,4 +97,13 @@ border: 1px solid #194775;
     left: 7px;
     color: #ccc;
     font-size: 14px; }
+.quizheader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+  height: 25px;
 
+}

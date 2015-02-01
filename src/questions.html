@@ -8,8 +8,18 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
      <link rel="stylesheet" href="styles/question.css" type="text/css" media="screen">
+
+
+
+  <!--- Timer script links -->  
+       
+    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/bootstrap/docs/assets/js/bootstrap.min.js"></script>
+    <script src="/app/js/timer.js"></script>
+   <!--- <script src="/docs/docs.js"></script>--> 
 
     <!--- Dont Touch this mess Below -->    
     <!-- bower:css -->
@@ -32,6 +42,19 @@
 
 <body>
 
+ <!-- Timer section-->
+    <div class="quizheader">
+
+        <div class="bs-docs-example">
+            
+
+            <h3>
+                <timer countdown="100" interval="1000">{{countdown}}</timer>
+            </h3>
+           
+        </div>
+     </div>   
+   
 
   <div class="questionContainer">
     <div>
