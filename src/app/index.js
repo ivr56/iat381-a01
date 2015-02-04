@@ -20,7 +20,13 @@
               templateUrl: 'main.html',
               controller: 'logcontroller'
             }).
-            
+          
+            when('/log', {
+              templateUrl: 'log.html',
+              controller: 'logcontroller'
+            }).
+          
+             
             when('/q1', {
                 redirectTo: '/questions/0'
             }).
