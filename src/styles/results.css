@@ -1,4 +1,12 @@
+body{
+  background-color: #f9f9f9;
+  /*background-image: none;*/
+  background-image:url('../img/GOT.jpg');
+}
+
+
 .r_questionContainer{
+  margin-top: 10%;
   display: block;
   height: 50%;
   padding: 10px;
@@ -6,27 +14,34 @@
 }
 
 .borderBottom h2{
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid white;
   text-align: left;
-  width:60%;
+  width:80%;
   margin-left: 10%;
 }
 
 .leaderboard h2{
-  
+  margin-top: 20%;
   text-align: left;
   width:40%;
   margin-left: 10%;
 }
 
 .btn {
-background-color: #000;
+background-color: transparent;
 width: 40%;
 height: 40px;
 border-radius: 0 !important;
 border: 1px solid white;
 margin-right: 10px;
 display: inline-block;
+color: #fff;
+
+}
+
+.btn:hover {
+background-color: transparent;
+color: #fff;
 
 }
 
@@ -47,15 +62,16 @@ height: 40;
   top: 0px;
   display: inline-block;
   height: 100%;
-  border: 1px solid white;
-  background-color: #333;
+  /*border: 1px solid white;*/
+  background:rgba(0,0,0, .2); ;
+
   color: white;
   
 }
 
 .container .jumbotron{
   padding: 0;
-   margin-left: 0;
-  margin-right: 0;
+   margin-left: auto;
+  margin-right: auto;
 }
 

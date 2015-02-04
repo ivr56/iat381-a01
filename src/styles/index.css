@@ -3,8 +3,6 @@ body{
 	background-image:url('http://images4.alphacoders.com/242/242556.jpg');
 	background-position: top;
 	background-repeat: no-repeat;
-	
-	
 	font-family: "Baskerville";
 	font-size: 14px;
 
@@ -57,12 +55,12 @@ body{
 
 
 .btn {
-background-color: #000;
+background-color: #fff;
 
 }
 
 .btn:hover{
- background-color: #ff0000;   
+ background-color: #333;   
 }
 
 p.normaltext{
@@ -125,7 +123,7 @@ input{
 margin:20px 0 0 0;
  	height: 40px;
  	border: 0;
- 	width: 80%;
+ 	width: 83%;
 
 }
 
@@ -155,12 +153,13 @@ input[type="submit"]{
 
 
 .btn {
-background-color: #000;
+background-color: #f9f9f9;
 width: 40%;
 height: 40px;
 border-radius: 0 !important;
-border: 1px solid white;
+border: 1px solid #ccc;
 margin-right: 10px;
 display: inline-block;
+color: #333;
 
 }
