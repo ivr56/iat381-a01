@@ -14,25 +14,23 @@ body{
 
 .answerContainer{
 	display: inline-block;
-	height: 40%;
-	width: 100%;
-  /*leave this, this centers answer block*/
+  height: 40%;
+  width: 100%;
+ /*leave this, this centers answer block*/
   padding-left: 2%;
 
 
 
 }
-
 .answerBlock{
-
-	background-color: #333;
-	border: 1px solid #fff;
-	display: inline-block;
-	width: 49%;
-	height:80px;
-  color: #fff;
-  float: left;
-
+ 
+  background-color: #333;
+  border: 1px solid #fff;
+  display: inline-block;
+  width: 49%;
+  height:80px;
+   color: #fff;
+   float: left;
 
 }
 
@@ -74,6 +72,7 @@ border: 1px solid #194775;
  background-color: #194775;   
  border: 1px solid #194775;
 }
+
 .quizpgcontainer .jumbotron{
 	padding: 0;
   width: 90%;
