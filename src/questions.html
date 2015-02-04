@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <head>
 <style>
 .imageblock
@@ -48,5 +49,113 @@
     </a>
     <!--- Defult--->
   </div>
+=======
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iat381A01</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+     <link rel="stylesheet" href="styles/question.css" type="text/css" media="screen">
+
+
+
+  <!--- Irene's Timer script links -->  
+       
+    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/bootstrap/docs/assets/js/bootstrap.min.js"></script>
+    <script src="/app/js/timer.js"></script>
+   <!--- <script src="/docs/docs.js"></script>--> 
+
+     <!--- END OF Irene's Timer script links -->  
+
+    <!--- Dont Touch this mess Below -->    
+    <!-- bower:css -->
+    <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automaticaly insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+    <!--- End Mess -->  
+      
+  
+    
+  </head>
+
+
+
+ <body ng-app="iat381-a01">
+
+ <!-- Irene's Timer section-->
+    <div class="quizheader">
+         <div>
+      Question Number: {{questionnumber}}
+    </div>
+        <div class="bs-docs-example">
+            
+
+            <h3>
+                <timer countdown="100" interval="1000">{{countdown}}</timer>
+            </h3>
+           
+        </div>
+     </div>   
+
+      <!-- END OF Irene's Timer section-->
+   
+<div class="quizpgcontainer">
+<!-- added/change class name-->
+<div class="jumbotron text-center">
+
+ <div class="imgblock">
+  <img src="http://www.pagetopremiere.com/wp-content/uploads/2014/03/Jon-Snow-Game-Of-Thrones.jpg" width="100%" alt="placeholder img" height="60%"></div>
+
+  <div class="questionContainer">
+      <div>
+        <!-- Question Number: {{questionnumber}}-->
+      </div>
+    <!-- added/change class name-->
+      <div>
+        <h3>{{question}}</h3>
+       
+      </div>
+
+
+      <!-- Irene: added/change class name-->
+      <div class="answerContainer">
+        <a 
+          ng-repeat="answer in answers" 
+          style="display:block; color:blue" 
+          ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">
+          
+          <!-- Irene: added/change class name-->
+          <p class="answerBlock">
+           {{answer.AnswerId}} - {{answer.Answer}}
+          </p>
+          <p class='test'>{{check}}</p>
+        </a>
+      </div>
+</div>
 
 </div>
+   
+
+</div>
+
+
+
+</body>
+</html>
+
+>>>>>>> irene-css
+

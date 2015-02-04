@@ -17,7 +17,7 @@
             }).
             
             when('/', {
-              templateUrl: 'log.html',
+              templateUrl: 'main.html',
               controller: 'logcontroller'
             }).
             
