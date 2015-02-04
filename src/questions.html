@@ -42,25 +42,15 @@
 
 
  <body ng-app="iat381-a01">
+     
 
- <!-- Irene's Timer section-->
-    <div class="quizheader">
-         <div>
-      Question Number: {{questionnumber}}
-    </div>
-        <div class="bs-docs-example">
-            
 
-            <h3>
-                <timer countdown="100" interval="1000">{{countdown}}</timer>
-            </h3>
-           
-        </div>
-     </div>   
 
-      <!-- END OF Irene's Timer section-->
-   
+
+
+    
 <div class="quizpgcontainer">
+    <div ng-include="'scorebar.html'">
 <!-- added/change class name-->
 <div class="jumbotron text-center">
 
@@ -98,8 +88,9 @@
 
 </div>
    
-
 </div>
+    
+    
 
 
 

@@ -1,7 +1,18 @@
 body{
   background-color: #f9f9f9;
-  /*background-image: none;*/
   background-image:url('../img/JonSnow.jpg');
+}
+
+
+.test
+{
+background-color: #f9f9f9;
+
+}
+.my-class
+{
+  background-color: #f9f9f9;
+  background-image:url('../img/JonSnow.jpg'); 
 }
 
 
