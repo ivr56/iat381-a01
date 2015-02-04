@@ -32,10 +32,12 @@
         
 
     .run(function ($rootScope) {
-    $rootScope.score = 0; //global variable for score
-    $rootScope.corrected = 0; //global variable for corrected
+    $rootScope.score = 0; 
+    //global variable for score
+    $rootScope.corrected = 0; 
+    //global variable for corrected
     $rootScope.quizset = 0;
-  
+    $rootScope.resetcount = 0;
     })
     //End Index.js
     //------------------

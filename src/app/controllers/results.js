@@ -3,7 +3,7 @@
     //Result Controller
    angular.module('iat381-a01')   
     .controller('resultcontroller', function($scope, $rootScope) {
-      console.log("End of the Road");
+    console.log("End of the Road");
        
     $scope.rs = function()
     {
@@ -15,4 +15,21 @@
     }
     
     })
+
+   .controller('timerctrl',
+   function($scope,$timeout, $rootScope) {
+       
+    $scope.counter = 15;
+    $scope.onTimeout = function()
+    {
+    $scope.counter--;
+    mytimeout = $timeout($scope.onTimeout,1000);
+    }
+    var mytimeout =       $timeout($scope.onTimeout,1000);
+    
+    $scope.stop = function()
+    {
+        $timeout.cancel(mytimeout);
+    }
+ })
      

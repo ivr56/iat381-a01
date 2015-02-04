@@ -10,6 +10,7 @@
           $location.path( '/result/' );
       } 
       
+
       //Change Markup
       $scope.questionnumber = $routeParams.questionId;  
   $scope.question_num = question.QuestionId;
@@ -38,6 +39,8 @@
            $rootScope.corrected = $rootScope.corrected + 0;
         }
         ///Next Question
+          
+        
         var nextQuestionId = parseInt($routeParams.questionId) + 1;
         $location.path( '/questions/' + nextQuestionId );
         $rootScope.answered = 1;
@@ -46,6 +49,7 @@
     
       };
       
+
       
     })
     //------------------ 
