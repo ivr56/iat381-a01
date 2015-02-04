@@ -1,4 +1,4 @@
-var timerModule = angular.module('timer', [])
+var timerModule = angular.module('iat381-a01', [])
   .directive('timer', ['$compile', function ($compile) {
     return  {
       restrict: 'EA',

@@ -58,7 +58,7 @@ body{
 
 .btn {
 background-color: #000;
-    
+
 }
 
 .btn:hover{
@@ -150,5 +150,17 @@ input[type="submit"]{
 	display: inline-block;
 	height: 50px;
 	margin-top: 20px;
+
+}
+
+
+.btn {
+background-color: #000;
+width: 40%;
+height: 40px;
+border-radius: 0 !important;
+border: 1px solid white;
+margin-right: 10px;
+display: inline-block;
 
 }

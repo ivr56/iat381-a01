@@ -1,13 +1,4 @@
-
-body{
-
-  
-  background-image: none;
-}
-
-
-
-.questionContainer{
+.r_questionContainer{
   display: block;
   height: 50%;
   padding: 10px;
@@ -29,7 +20,7 @@ body{
 }
 
 .btn {
-background-color: #red;
+background-color: #000;
 width: 40%;
 height: 40px;
 border-radius: 0 !important;
@@ -37,10 +28,9 @@ border: 1px solid white;
 margin-right: 10px;
 display: inline-block;
 
-
 }
 
-.buttonContainer{
+.r_buttonContainer{
   margin-top: 100px;
 margin-left: 2%;
 
@@ -48,7 +38,7 @@ height: 40;
 }
 
 
-.quizpgcontainer .jumbotron{
+.r_quizpgcontainer .jumbotron{
   padding: 0;
   width: 100%;
   margin-left: 0;

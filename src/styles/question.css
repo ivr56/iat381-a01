@@ -1,6 +1,5 @@
 body{
-
-  background-color: #333;
+   background-color: #333;
   background-image: none;
 }
 
@@ -9,6 +8,8 @@ body{
 	display: block;
 	height: 60%;
 	padding: 10px;
+  margin-right: 0;
+  margin-left: 0;
 
 }
 
@@ -16,14 +17,17 @@ body{
 	display: inline-block;
   height: 40%;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
  /*leave this, this centers answer block*/
   padding-left: 2%;
 
 
 
+
 }
 .answerBlock{
- 
+  display: inline-block;
   background-color: #333;
   border: 1px solid #fff;
   display: inline-block;
