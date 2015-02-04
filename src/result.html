@@ -1,10 +1,77 @@
 <head>
-<link rel="stylesheet" href="styles/about.css">
+ <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="styles/results.css">
 
+
+<!--- Dont Touch this mess Below -->    
+    <!-- bower:css -->
+    <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automaticaly insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+    <!--- End Mess --> 
 </head>
 
 <body>
-<h1>You score is: {{score}}</h1>
-<p>Test result page</p>
+
+
+
+     
+
+      
+   
+<div class="quizpgcontainer">
+<!-- added/change class name-->
+
+
+	<div class="jumbotron text-center">
+
+ 
+
+  		<div class="questionContainer">
+    		<div>
+      			<h1>100 Points</h1>
+      			<h1>3 out of 3</h1>
+    		</div>
+    <!-- added/change class name-->
+    		<div>
+      			
+      			<div class="leaderboard">
+      			<h2 class="leaderboard">Rank</h2>
+      			</div>
+      			<br>
+      			<br>
+      			<div class="borderBottom">
+      				<h2 class="borderBottom">Score 1</h2>
+      				<h2>Score 2</h2>
+      				<h2>Score 3</h2>
+      			</div>
+
+     		</div>
+		
+		<div class="buttonContainer">
+		<a class="btn" ng-href="#/q1" ng-click="rs()">
+		Return to the Bloody Start</a>
+		<a class="btn" ng-href="#/q1" ng-click="rs()">
+		2nd Button</a>
+		</div>
+
+		</div>
+	</div>
+   
+
+	
+		<a class="btn btn-lg btn-success" ng-href="#/q1" ng-click="rs()">
+		Return to the Bloody Start</a>
+		<a class="btn btn-lg btn-success" ng-href="#/q1" ng-click="rs()">
+		2nd Button</a>
+
+	
+</div>
 
 </body>
