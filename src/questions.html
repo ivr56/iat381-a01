@@ -1,48 +1,4 @@
-
-<div data-ng-include data-src="'scorebar.html'"></div>
-
-<div>
-  <div>
-    Question Number: {{questionnumber}}
-  </div>
-    
-  <div  ng-controller="imagecontroller">
-    <a ng-click="prevButton()">prevButton</a>
-    <img ng-src="{{availableImages[currentImage].src}}"/>
-    <a ng-click="nextButton()">nextButton</a>
-    <br/>
-    currentImage: {{currentImage}}
-</div>
-    
-    </div> 
-    <!--- New Div for Images - Ivor --->
-    <div class='questioncontainer_txt'>
-        {{question}}
-    </div>
-        <!--- Additon of Image Array End --->
-  <div>
-
-    
-  </div>
-  <div>
-
-      
-       <!--- Defult--->
-      <a 
-      ng-repeat="answer in answers" 
-      style="display:block; color:blue" 
-      ng-click="answerquestion(answer.AnswerId, answer.Answer, check)"
-      ng-click="answered()"    
-         >
-      
-      <p>{{answer.AnswerId}} - {{answer.Answer}}</p>
-      <p class='test'>{{check}}</p>
-    </a>
-    <!--- Defult--->
-  </div>
-=======
-<!doctype html>
-<html>
+<!doctype html><html>
   <head>
     <meta charset="utf-8">
     <title>iat381A01</title>
@@ -108,8 +64,11 @@
 <!-- added/change class name-->
 <div class="jumbotron text-center">
 
- <div class="imgblock">
-  <img src="http://www.pagetopremiere.com/wp-content/uploads/2014/03/Jon-Snow-Game-Of-Thrones.jpg" width="100%" alt="placeholder img" height="60%"></div>
+ <div class="imgblock" ng-controller="imagecontroller">
+  <img ng-src="{{availableImages[currentImage].src}}" width="100%" alt="placeholder img" height="60%">
+    
+    </div>
+    
 
   <div class="questionContainer">
       <div>
@@ -148,5 +107,4 @@
 </body>
 </html>
 
->>>>>>> irene-css
 
