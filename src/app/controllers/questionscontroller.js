@@ -12,8 +12,7 @@
       
       //Change Markup
       $scope.questionnumber = $routeParams.questionId;  
-  
-      $scope.question_num = question.QuestionId;
+  $scope.question_num = question.QuestionId;
       $scope.question = question.Question;
       $scope.answers = question.Answers;
       $scope.check = question.CheckId;

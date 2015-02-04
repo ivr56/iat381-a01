@@ -1,0 +1,44 @@
+#scorebar 
+{
+    display: black;
+    height: 41px;
+    margin-top: 0px;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+.bar_qnumber 
+{
+    display: inline-block;
+    width: 20%;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 6.25%;
+    float: left;
+    color: #000;
+}
+
+
+.bar_score
+{
+    display: inline-block;
+    width: 20%;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 12.5%;
+    float: left;
+    color: #000;
+}
+
+
+.bar_timer
+{
+    display: inline-block;
+    width: 20%;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 12.5%;
+    float: left;
+    color: #000;
+}
