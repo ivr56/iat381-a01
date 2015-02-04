@@ -18,7 +18,7 @@ body{
 	margin-right: auto;
 	margin-left: auto;
 	
-	height: 180px;
+	height: 150px;
 }
 
 .signuppg .jumbotron .btn{
@@ -132,7 +132,7 @@ p.normaltext{
 }
 
 input{
-	margin:10px 0 10px 0;
+	margin:20px 0 0 0;
 	height: 40px;
 	border: 0;
 	width: 80%;

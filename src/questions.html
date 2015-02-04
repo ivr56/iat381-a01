@@ -69,28 +69,30 @@
   <img src="http://www.pagetopremiere.com/wp-content/uploads/2014/03/Jon-Snow-Game-Of-Thrones.jpg" width="100%" alt="placeholder img" height="60%"></div>
 
   <div class="questionContainer">
-    <div>
-      Question Number: {{questionnumber}}
-    </div>
+      <div>
+        Question Number: {{questionnumber}}
+      </div>
     <!-- added/change class name-->
-    <div>
-      <h2>{{question}}</h2>
-     
-    </div>
+      <div>
+        <h2>{{question}}</h2>
+       
+      </div>
 
 
-  <!-- Irene: added/change class name-->
-  <div class="answerContainer">
-    <a 
-      ng-repeat="answer in answers" 
-      style="display:block; color:blue" 
-      ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">
-      
       <!-- Irene: added/change class name-->
-      <p class="answerBlock">{{answer.AnswerId}} - {{answer.Answer}}</p>
-      <p class='test'>{{check}}</p>
-    </a>
-  </div>
+      <div class="answerContainer">
+        <a 
+          ng-repeat="answer in answers" 
+          style="display:block; color:blue" 
+          ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">
+          
+          <!-- Irene: added/change class name-->
+          <p class="answerBlock">
+            <div class="">{{answer.AnswerId}} - {{answer.Answer}}</div>
+          </p>
+          <p class='test'>{{check}}</p>
+        </a>
+      </div>
 </div>
 
 </div>
