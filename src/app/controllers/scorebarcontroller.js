@@ -2,7 +2,8 @@
     .controller('scorebarcontroller', function($scope, $rootScope) {
 
       $scope.scoring = $rootScope.score;
-
+      $scope.correct = $rootScope.corrected;
+    
     })
      
      

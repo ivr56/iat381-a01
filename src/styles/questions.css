@@ -1,21 +1,14 @@
 body{
-  background-color: #f9f9f9;
+
+}
+
+.q_bg
+{
+      background-color: #f9f9f9;
+  /*background-image: none;*/
   background-image:url('../img/JonSnow.jpg');
+    height: 800px;
 }
-
-
-.test
-{
-background-color: #f9f9f9;
-
-}
-.my-class
-{
-  background-color: #f9f9f9;
-  background-image:url('../img/JonSnow.jpg'); 
-}
-
-
 .questionContainer{
 	display: block;
 	height: 60%;
@@ -93,7 +86,7 @@ border: 1px solid #194775;
 
 .quizpgcontainer .jumbotron{
 	padding: 0;
-  width: 80%;
+  width: 90%;
   margin-left: 5%;
   margin-right: 5%;
   position: relative;

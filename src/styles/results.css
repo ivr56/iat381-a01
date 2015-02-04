@@ -1,8 +1,12 @@
-body{
-/*  background-color: #f9f9f9;
-  background-image:url('../img/GOT.jpg'); */
-}
 
+.results_bg
+{
+    background-image:url('../img/GOT.jpg');
+    background-position: center;
+    width: 100%;
+       height: 800px;
+    margin-top: 0;
+}
 
 .r_questionContainer{
   margin-top: 10%;
@@ -73,4 +77,3 @@ height: 40;
    margin-left: auto;
   margin-right: auto;
 }
-

@@ -1,56 +1,26 @@
-<!doctype html><html>
-  <head>
-    <meta charset="utf-8">
-    <title>iat381A01</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
-     <link rel="stylesheet" href="styles/question.css" type="text/css" media="screen">
-
-
-
-  <!--- Irene's Timer script links -->  
-
-   <!--- <script src="/docs/docs.js"></script>--> 
-
-     <!--- END OF Irene's Timer script links -->  
-
-    <!--- Dont Touch this mess Below -->    
-    <!-- bower:css -->
-    <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
-    <!-- inject:css -->
-    <!-- css files will be automaticaly insert here -->
-    <!-- endinject -->
-    <!-- endbuild -->
-    <!--- End Mess -->  
-      
-  
+<head>
+<style>
+.imageblock
+    {
+    }
     
-  </head>
+    
+    </style>
+</head>
+<body>
+<div class="q_bg">
+    
+    <div data-ng-include data-src="'scorebar.html'"></div>
 
-
-
- <body ng-app="iat381-a01">
-     
-<div data-ng-include data-src="'scorebar.html'"></div>
-
-
+    
+    <!--- Irene Injected--->
+  
 <div class="quizpgcontainer">
-
 <!-- added/change class name-->
 <div class="jumbotron text-center">
 
- <div class="imgblock" ng-controller="imagecontroller">
-  <img ng-src="{{availableImages[currentImage].src}}" width="100%" alt="placeholder img" height="60%">   
-    </div>
-    
+ <div class="imgblock"  ng-controller="imagecontroller">
+  <img ng-src="{{availableImages[currentImage].src}}" width="100%" alt="placeholder img" height="60%"></div>
 
   <div class="questionContainer">
       <div>
@@ -80,14 +50,11 @@
 </div>
 
 </div>
-   
+       <!--- Irene End --->
+
 </div>
     
-    
-
+</div>
 
 
 </body>
-</html>
-
-
