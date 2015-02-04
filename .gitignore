@@ -4,3 +4,4 @@ bower_components/
 .tmp/
 gulp-angular-tempaltecache/
 gulp-dev-replace/
+dist/

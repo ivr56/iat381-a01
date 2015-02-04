@@ -43,6 +43,7 @@ gulp.task('serve', ['watch'], function () {
     paths.tmp + '/serve/{app,components}/**/*.html',
     paths.src + '/{app,components}/**/*.html'
   ]);
+  
 });
 
 gulp.task('serve:dist', ['build'], function () {
@@ -55,4 +56,4 @@ gulp.task('serve:e2e', ['inject'], function () {
 
 gulp.task('serve:e2e-dist', ['build'], function () {
   browserSyncInit(paths.dist, null, []);
-});
+})
