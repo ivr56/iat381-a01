@@ -10,6 +10,11 @@ body{
 
 }
 
+.maincontainer
+{
+    width: 100%;
+
+}
 
 .signuppg .jumbotron{
 	position: relative;
