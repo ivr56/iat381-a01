@@ -16,7 +16,9 @@
       $scope.user=APP.user;
       $scope.start=function(){
       APP.user=$scope.user;
+   
       window.location='#/questions/0';
+
     };
       //end of irene testing line
     })

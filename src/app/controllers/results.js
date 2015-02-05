@@ -3,6 +3,10 @@
     //Result Controller
    angular.module('iat381-a01')   
     .controller('resultcontroller', function($scope, $rootScope) {
+
+        //irene testing
+      $scope.user=APP.user;
+      //end of irene testing
    
             //start of irene testing
                     //show scores
