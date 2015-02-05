@@ -18,19 +18,35 @@
     })
 
    .controller('timerctrl',
-   function($scope,$timeout, $rootScope) {
+   function($scope,$timeout, $rootScope, $routeParams,$location, quizservice) {
        
-    $scope.counter = 15;
+    $scope.counter = 5;
     $scope.onTimeout = function()
     {
     $scope.counter--;
+    $rootScope.time = $scope.counter;
+    console.log($rootScope.time);
     mytimeout = $timeout($scope.onTimeout,1000);
+    
+    if ($rootScope.time === 1)
+    {
+    console.log("Test Timeout");
+var question = quizservice.getquestion(parseInt($routeParams.questionId));  
+        
+    var nextQuestionId = parseInt($routeParams.questionId) + 1;
+        $location.path( '/questions/' + nextQuestionId );
+        $rootScope.answered = 1;
     }
-    var mytimeout =       $timeout($scope.onTimeout,1000);
+        
+    }
+    
+    var mytimeout =  $timeout($scope.onTimeout,1000);
     
     $scope.stop = function()
     {
         $timeout.cancel(mytimeout);
     }
  })
+   
+
      
