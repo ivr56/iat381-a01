@@ -45,6 +45,7 @@
     //global variable for corrected
     $rootScope.quizset = 0;
     $rootScope.resetcount = 0;
+    $rootScope.activeresult = 0;
     })
 
      //start of irene testing//

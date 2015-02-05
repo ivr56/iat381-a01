@@ -45,7 +45,8 @@
     console.log($rootScope.time);
     mytimeout = $timeout($scope.onTimeout,1000);
     
-    if ($rootScope.time === 1)
+        
+    if ($rootScope.time === 1 && $rootScope.activeresult === 0)
     {
     console.log("Test Timeout");
 var question = quizservice.getquestion(parseInt($routeParams.questionId));  
@@ -53,8 +54,20 @@ var question = quizservice.getquestion(parseInt($routeParams.questionId));
     var nextQuestionId = parseInt($routeParams.questionId) + 1;
         $location.path( '/questions/' + nextQuestionId );
         $rootScope.answered = 1;
+        $rootScope.activeresult = 0;
+        
+        if (window.location==='#/questions/0')
+        {
+            $rootScope.activeresult = 1;
+        }
+        
+    }
+    else if ($rootScope.activeresult === 1)
+    {
+        
     }
         
+    
     }
     
     var mytimeout =  $timeout($scope.onTimeout,1000);
