@@ -20,7 +20,13 @@
               templateUrl: 'main.html',
               controller: 'logcontroller'
             }).
-            
+          
+            when('/log', {
+              templateUrl: 'log.html',
+              controller: 'logcontroller'
+            }).
+          
+             
             when('/q1', {
                 redirectTo: '/questions/0'
             }).
@@ -35,6 +41,7 @@
     $rootScope.score = 0; 
     //global variable for score
     $rootScope.corrected = 0; 
+      $rootScope.time = 0;
     //global variable for corrected
     $rootScope.quizset = 0;
     $rootScope.resetcount = 0;

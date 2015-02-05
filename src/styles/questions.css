@@ -61,7 +61,7 @@ p.answerBlock{
   width: 100%;
 }
 
-.test{
+.answerCheck{
   display: none;
 }
 
@@ -135,6 +135,10 @@ border: 1px solid #194775;
   display: inline-block;
   height: 25px;
 
+}
+
+.hideID{
+display: none;
 }
 
 

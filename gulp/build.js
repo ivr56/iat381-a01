@@ -96,13 +96,10 @@ gulp.task('javascripts', function () {
     .pipe(gulp.dest(paths.dist + '/js/'));
 });
 
-gulp.task('htmlviews', function () {
-  return gulp.src(paths.src + '/views/*.html')
-    .pipe(gulp.dest(paths.dist + '/views/'));
-});
-gulp.task('htmlall', function () {
-  return gulp.src(paths.src + '/*.html')
-    .pipe(gulp.dest);
+
+gulp.task('htmlflow', function () {
+  return gulp.src(paths.src + '/**/*.html')
+    .pipe(gulp.dest(paths.dist + '/'));
 });
 
 gulp.task('cssviews', function () {
@@ -114,4 +111,4 @@ gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
-gulp.task('build', ['html', 'images_png', 'images_jpg', 'fonts', 'javascripts', 'htmlviews', 'cssviews', 'controllers', 'lumxframework', 'htmlall']);
+gulp.task('build', ['html', 'images_png', 'images_jpg', 'fonts', 'javascripts', 'htmlflow', 'cssviews', 'controllers', 'lumxframework']);
