@@ -11,11 +11,13 @@
 .bar_qnumber 
 {
     display: inline-block;
-    width: 70px;
+    /*width: 70px;*/
+    width: 25%;
     height: 20px;
     margin-top: 10px;
-    margin-left: 14%;
-    float: left;
+    /*margin-left: 12.5%;*/
+    margin-left: 5%;
+    /*float: left;*/
     color: #000;
 }
 
@@ -23,11 +25,12 @@
 .bar_score
 {
     display: inline-block;
-    width: 70px;
+     /*width: 70px;*/
+    width: 8%;
     height: 20px;
     margin-top: 10px;
-    margin-left: 12.5%;
-    float: left;
+    margin-left: 22%;
+     /*float: left;*/
     color: #000;
 }
 
@@ -35,13 +38,14 @@
 .bar_timer
 {
     display: inline-block;
-    width: 70px;
+     /*width: 70px;*/
+    width: 20%;
     height: 20px;
     margin-top: 10px;
-    margin-left: 12.5%;
-    float: left;
+    margin-left: 15%;
+    /*float: left;*/
     color: #dc2b20;
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-style: bold;
     line-height: 20px;
 
