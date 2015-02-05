@@ -17,11 +17,8 @@
   		<div class="r_questionContainer">
 
          <!-- start of irene testing-->
-           <p>{{user.name}}'s score result</p>  
-           <div ng-repeat="score in scores">
-            <p>{{score.id}} - You said: {{score.answer}} which is: {{score.correct}}</p>
-
-          </div>
+           <h2>{{user.name}}'s score result:</h2>  
+          
 
 
         <!-- end of irene testing line-->
@@ -33,8 +30,13 @@
     		</div>
     <!-- added/change class name-->
     		<div>
-      			
-      			<div class="leaderboard">
+
+           <div class="detailresult" ng-repeat="score in scores">
+            <p>For question {{score.id}}, your Answer was: {{score.answer}}, which is: {{score.correct}}</p>
+
+          </div>
+      			<!-- start of irene testing-->
+      			<!--<div class="leaderboard">
       			<h2 class="leaderboard">Rank</h2>
       			</div>
       
@@ -42,8 +44,8 @@
       				<h2 class="borderBottom">Score 1</h2>
       				<h2>Score 2</h2>
       				<h2>Score 3</h2>
-      			</div>
-
+      			</div>-->
+              <!-- end of irene testing line-->
      		</div>
 		
 		<div class="r_buttonContainer">
