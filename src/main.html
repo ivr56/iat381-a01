@@ -36,8 +36,10 @@
 						<!--<span class="formname">Username:</span> -->
 						<!--<span class="formline">-->
 						<!--<<span class="formname"><img src="../img/name.png" width="20px" alt="name icon"></span>-->
-						<input type="text" name="username" value="" placeholder="Name :"/>
-					</span>
+
+						<!-- irene modified-->
+						<input ng-model="user.name" type="text" name="username" placeholder="Name :"/>
+					<!--</span>-->
 						<br />
 						
 						<!--<span class="formline">
@@ -58,11 +60,11 @@
 						<!-- submit button-->
 						<!-- <input type="submit" name="submit" value="Sign Up"/>-->
 					</form>	
-
+					
        
 					 <p><a class="btn btn-lg btn-success" ng-href="#/q1">Rank
-
-          			</a><a class="btn btn-lg btn-success" ng-href="#/q1">Start</a></p>
+					 <!-- irene modified -->	
+          			</a><a class="btn btn-lg btn-success" ng-click="start()">Start</a></p>
       
 
          <!-- <img src="img/stark.jpg" width="25%"><img src="img/lannister.jpg" width="25%"><img src="img/baratheon.jpg" width="25%"><img src="img/targaryen.jpg" width="25%">-->

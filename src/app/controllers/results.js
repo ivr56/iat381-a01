@@ -3,7 +3,20 @@
     //Result Controller
    angular.module('iat381-a01')   
     .controller('resultcontroller', function($scope, $rootScope) {
+   
+            //start of irene testing
+                    //show scores
+
+            $scope.scores = APP.scores;
+
+
+         //end of irene testing line
+
+
+
     console.log("End of the Road");
+
+
 
     $scope.rs = function()
     {

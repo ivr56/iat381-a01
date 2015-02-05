@@ -39,5 +39,18 @@
     $rootScope.quizset = 0;
     $rootScope.resetcount = 0;
     })
+
+     //start of irene testing//
+    //ADD any variables you want to access in all controllers to the APP variable
+
+    var APP = {};
+
+    APP.user = {
+      name:'',
+      age:0
+    }
+
+    APP.scores = [];
+     //end of irene testing line
     //End Index.js
     //------------------

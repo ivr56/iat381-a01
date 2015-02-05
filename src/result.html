@@ -12,9 +12,21 @@
 
 	<div class="jumbotron text-center">
 
- 
+      
 
   		<div class="r_questionContainer">
+
+         <!-- start of irene testing-->
+                
+           <div ng-repeat="score in scores">
+            <p>{{score.id}} - You said: {{score.answer}} which is: {{score.correct}}</p>
+           
+          </div>
+
+
+        <!-- end of irene testing line-->
+
+
     		<div>
       			<h1>{{score}} Points</h1>
       			<h1>{{correct}} out of 3 Correct</h1>
