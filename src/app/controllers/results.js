@@ -1,4 +1,4 @@
-  
+
     //------------------
     //Result Controller
    angular.module('iat381-a01')   
@@ -37,7 +37,7 @@
    .controller('timerctrl',
    function($scope,$timeout, $rootScope, $routeParams,$location, quizservice) {
        
-    $scope.counter = 5;
+    $scope.counter = 15;
     $scope.onTimeout = function()
     {
     $scope.counter--;
