@@ -10,8 +10,8 @@ var $ = require('gulp-load-plugins')({
 
 gulp.task('partials', function () {
   return gulp.src([
-    paths.src + '/{app,components, navbar, controllers, main}/**/*.html',
-    paths.tmp + '/{app,components, navbar, controllers, main}/**/*.html'
+    paths.src + '/{app,components, scripts}/**/*.html',
+    paths.tmp + '/{app,components, scripts}/**/*.html'
   ])
     .pipe($.minifyHtml({
       empty: true,
@@ -19,7 +19,7 @@ gulp.task('partials', function () {
       quotes: true
     }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'iat381A01'
+      module: 'test'
     }))
     .pipe(gulp.dest(paths.tmp + '/partials/'));
 });
@@ -32,7 +32,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     addRootSlash: false
   };
 
-  var htmlFilter = $.filter('**/*.html');
+  var htmlFilter = $.filter('*.html');
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
   var assets;
@@ -52,7 +52,6 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe($.useref())
     .pipe($.revReplace())
     .pipe(htmlFilter)
-    
     .pipe($.minifyHtml({
       empty: true,
       spare: true,
@@ -62,13 +61,10 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe(gulp.dest(paths.dist + '/'))
     .pipe($.size({ title: paths.dist + '/', showFiles: true }));
 });
-gulp.task('images_png', function () {
-  return gulp.src(paths.src + '/img/*.png')
-    .pipe(gulp.dest(paths.dist + '/img/'));
-});
-gulp.task('images_jpg', function () {
-  return gulp.src(paths.src + '/img/*.jpg')
-    .pipe(gulp.dest(paths.dist + '/img/'));
+
+gulp.task('images', function () {
+  return gulp.src(paths.src + '/img/*')
+    .pipe(gulp.dest(paths.dist + '/images/'));
 });
 
 
@@ -79,36 +75,15 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(paths.dist + '/fonts/'));
 });
 
-
-
-gulp.task('controllers', function () {
-  return gulp.src(paths.src + '/app/controllers/*.js')
-    .pipe(gulp.dest(paths.dist + '/controllers/'));
-});
-
-gulp.task('lumxframework', function () {
-  return gulp.src(paths.src + '/app/scripts/*.js')
-    .pipe(gulp.dest(paths.dist + '/scripts/'));
-});
-
-gulp.task('javascripts', function () {
-  return gulp.src(paths.src + '/app/*.js')
-    .pipe(gulp.dest(paths.dist + '/js/'));
-});
-
-
-gulp.task('htmlflow', function () {
-  return gulp.src(paths.src + '/**/*.html')
+gulp.task('misc', function () {
+  return gulp.src(paths.src + '/**/*.ico')
     .pipe(gulp.dest(paths.dist + '/'));
 });
 
-gulp.task('cssviews', function () {
-  return gulp.src(paths.src + '/styles/*.css')
-    .pipe(gulp.dest(paths.dist + '/styles/'));
-});
+
 
 gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
-gulp.task('build', ['html', 'images_png', 'images_jpg', 'fonts', 'javascripts', 'htmlflow', 'cssviews', 'controllers', 'lumxframework']);
+gulp.task('build', ['html', 'images', 'fonts', 'misc']);

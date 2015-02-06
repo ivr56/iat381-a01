@@ -1,14 +1,16 @@
     //Log In Contrller
     //------------------
-  angular.module('iat381-a01')
-  
+  angular.module('iat381-a01')  
     .controller('logcontroller', function($scope, $rootScope) {
+      
+      $rootScope.time = 0;
+      console.log("Time Gentlemen " +  $rootScope.time); 
       
       //start of irene testing
       APP.scores=[];
       //end of irene testing line
       console.log("Check Log"); 
-      $rootScope.quizset = Math.floor((Math.random() * 10) + 1);;
+      $rootScope.quizset = Math.floor((Math.random() * 10) + 1);
       console.log("Quiz #: " + $rootScope.quizset); 
 
 
@@ -19,10 +21,17 @@
    
       window.location='#/questions/0';
 
+    
+          
     };
+
+      $scope.rstart=function(){
+         APP.scores=[];
+         window.location='#/questions/0';
+      }
       //end of irene testing line
     })
+  
     //------------------  
     //Log In Contrller End
-
   
