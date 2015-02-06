@@ -20,6 +20,11 @@
       window.location='#/questions/0';
 
     };
+
+      $scope.rstart=function(){
+         APP.scores=[];
+         window.location='#/questions/0';
+      }
       //end of irene testing line
     })
     //------------------  
