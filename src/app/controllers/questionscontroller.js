@@ -9,12 +9,14 @@
 
       var question = quizservice.getquestion(parseInt($routeParams.questionId));
  
+
        
        
       if (question === null) {
           $location.path( '/result/' );
       } 
       
+       
 
       //Change Markup
       $scope.questionnumber = $routeParams.questionId;  
@@ -23,11 +25,14 @@
       $scope.answers = question.Answers;
       $scope.check = question.CheckId;
       $scope.deck = question.imagesrc;
+   
+       
       //Change Markup 
+      
       $scope.answerquestion = function(answerid, answer, checking) {
         console.log("user answered with: " + answerid);
         console.log("CPU answered with: " + checking);
-
+          
           //start of irene testing
           var isCorrect=false;
 
@@ -44,14 +49,14 @@
         console.log("Correct");
         $rootScope.score =  $rootScope.score + 100;
         console.log("Part 2 :" + $rootScope.score);
-        $rootScope.corrected = $rootScope.corrected + 1;
+        $rootScope.used = $rootScope.used + 1;
         }
         else
         {
          console.log("In-Correct");
         $rootScope.score =  $rootScope.score + 0;
         console.log("Part 2 :" + $rootScope.score);
-           $rootScope.corrected = $rootScope.corrected + 0;
+           $rootScope.used = $rootScope.used + 1;
         }
         ///Next Question
           
@@ -77,3 +82,20 @@
     //------------------ 
     //Questions Controller End
    
+     .controller('endquestionscontroller', function($scope,$rootScope, $routeParams,$location, quizservice, questionscontroller) 
+    {
+      
+       
+    //Number of Questions
+var tq_questions = 
+quizservice.getquestion(numberquestions);
+var cq_questions = 
+quizservice.getquestion(questionNumber);
+   
+       if (tq_question == cq_questions)
+       {
+        console.log("Questions to Results");
+       
+       }
+       
+   })

@@ -18,10 +18,39 @@
    
       window.location='#/questions/0';
 
+    
+          
     };
       //end of irene testing line
     })
+  
     //------------------  
     //Log In Contrller End
-
   
+    .controller('resultscheck', 
+function($scope, $rootScope) 
+    {
+    console.log("Results Logged!!");
+    $rootScope.time = 0;
+    })
+  
+    .controller('questionscheck', 
+function($scope, $rootScope) 
+    {
+    console.log("Questions Logged!!");
+    $rootScope.time = 1;
+    })
+  
+   .controller('logcheck', 
+function($scope, $rootScope) 
+    {
+    console.log("Log Logged!!");
+    $rootScope.time = 0;
+    })
+  
+  .controller('maincheck', 
+function($scope, $rootScope) 
+    {
+    console.log("Main Logged!!");
+    $rootScope.time = 0;
+    })
