@@ -3,8 +3,10 @@
     //Result Controller
    angular.module('iat381-a01')   
     .controller('resultcontroller', function($scope, $rootScope, timerctrl) {
+       
 
-        //irene testing
+    
+       //irene testing
       $scope.user=APP.user;
       //end of irene testing
    
@@ -19,7 +21,8 @@
 
 
     console.log("End of the Road");
-    
+    $rootScope.time = 0;
+    console.log("Time Gentlemen " + $rootScope.time);  
 
 
     $scope.rs = function()
@@ -45,7 +48,6 @@
         
     $scope.counter--;
     $rootScope.time = $scope.counter;
-    console.log($rootScope.time);
     mytimeout = $timeout($scope.onTimeout,1000);
     console.log($rootScope.used);
     

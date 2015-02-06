@@ -3,6 +3,9 @@
     //Questions Controller Start
     .controller('questionscontroller', function($scope,$rootScope, $routeParams,$location, quizservice) {
       
+    $rootScope.time = 1;
+    console.log("Time Gentlemen " + $rootScope.time);  
+       
       //irene testing
       $scope.user=APP.user;
       //end of irene testing

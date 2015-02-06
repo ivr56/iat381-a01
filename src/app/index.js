@@ -11,25 +11,25 @@
               templateUrl: 'result.html',
               controller: 'resultcontroller'
             }).
+      
+                  
             when('/questions/:questionId', {
               templateUrl: 'questions.html',
               controller: 'questionscontroller'
             }).
+          
             
             when('/', {
               templateUrl: 'main.html',
               controller: 'logcontroller'
             }).
+        
           
             when('/log', {
               templateUrl: 'log.html',
               controller: 'logcontroller',
             }).
-          
-            when('/log', {
-              templateUrl: 'log.html',
-              controller: 'resultscheck',
-            }).
+      
           
             when('/q1', {
                 redirectTo: '/questions/0'
