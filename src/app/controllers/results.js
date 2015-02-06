@@ -21,8 +21,9 @@
 
 
     console.log("End of the Road");
-    $rootScope.timeenabled = 0;
-    console.log("Time Gentlemen " + $rootScope.timeenabled);  
+    $rootScope.pagechange = 0;
+    $rootScope.timing = 0;
+    console.log("Time Gentlemen: " + $rootScope.timing + "Page Change: " + $rootScope.pagechange);  
 
 
     $scope.rs = function()
@@ -38,38 +39,66 @@
     })
 
    
+   .controller('timectrl_view',
+   function($scope,$timeout, $rootScope, $routeParams,$location, quizservice) {
+    console.log(timectrl.timesup);
+
+        
+    })
+       
+   
    .controller('timerctrl',
    function($scope,$timeout, $rootScope, $routeParams,$location, quizservice) {
+  
+var timesup;
+    if ($rootScope.pagechange === 0)
+    {
+        console.log("New View at 0");
+    } //Timer Disabled
        
-    $scope.counter = 15;
+    else if ($rootScope.pagechange === 1)
+    {
+        startclock();
+        $scope.counter = 5;
+
     
     $scope.onTimeout = function()
     {
         
     $scope.counter--;
-    $rootScope.time = $scope.counter;
     mytimeout = $timeout($scope.onTimeout,1000);
-    console.log($rootScope.used);
+    }
     
+    var mycountdown =  $timeout($scope.onTimeout,1000);
         
-    if ($rootScope.timeenabled == 1 && $scope.counter == 0)
-    {
-        
-console.log("Test Timeout");
-var question = quizservice.getquestion(parseInt($routeParams.questionId));var nextQuestionId = parseInt($routeParams.questionId) + 1;
+       
+    }//Time Enabled
 
-    $location.path( '/questions/' + nextQuestionId );
-    $rootScope.answered = 1;
-    $rootScope.activeresult = 0;
-    $rootScope.used = $rootScope.used + 1;
-        
-    }
-    }
     
-    var mytimeout =  $timeout($scope.onTimeout,1000);
-    $scope.stop = function()
-    {
-    $timeout.cancel(mytimeout);
+    function startclock()
+       {
+           console.log("Start Clock");
+           timesup = setTimeout(callTimeout, 5000);
+           console.log(timesup);
+       }
+       
+           
+    function callTimeout() {        
+   console.log("Timeout : Question Incorrect");
+var question = quizservice.getquestion(parseInt($routeParams.questionId));
+       
+var nextQuestionId = parseInt($routeParams.questionId) + 1;
+$rootScope.used = $rootScope.used + 1;
+        
+$scope.$apply(function() {
+$location.path( '/questions/' + nextQuestionId );
+});
+    
+    console.log("Cleared"); 
+    $timeout.cancel(timesup);
+        
+    
+        
     }
  })
    

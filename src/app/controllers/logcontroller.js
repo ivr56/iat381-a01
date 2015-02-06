@@ -3,8 +3,9 @@
   angular.module('iat381-a01')  
     .controller('logcontroller', function($scope, $rootScope) {
       
-      $rootScope.time = 0;
-      console.log("Time Gentlemen " +  $rootScope.time); 
+ $rootScope.pagechange = 0;
+    $rootScope.timing = 0;
+    console.log("Time Gentlemen: " + $rootScope.timing + "Page Change: " + $rootScope.pagechange);  
       
       //start of irene testing
       APP.scores=[];
@@ -35,3 +36,23 @@
     //------------------  
     //Log In Contrller End
   
+  //------------------  
+    //Quiz Select
+  .controller('log_quizselect', function($scope, $rootScope) {
+      
+      $scope.easy = function ()
+      {
+  
+        $rootScope.quizset = 1;
+
+      }
+       $scope.med = function ()
+      {
+           $rootScope.quizset = 2;    
+
+      }
+           $rootScope.quizset = 3;
+        $scope.hard = function ()
+      {
+      }
+  })
