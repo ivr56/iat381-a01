@@ -7,6 +7,10 @@
     </style>
 
      <link rel="stylesheet" href="styles/questions.css" type="text/css" media="screen">
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular-touch.js"></script>
+  <script src="app/js/imgq_script.js"></script>
+
 </head>
 <body>
 <div class="q_bg">
@@ -42,12 +46,24 @@
        
       </div>
 
-
+       
 
       <!-- Irene: added/change class name-->
-       <div class="imgq_answerContainer">
+       <div class="imgq_answerContainer" ng-app="ngSwipeQuiz">
+             <div class="imgq_button">
+                <div class="sleft" ng-swipe-left="showAction =true">
+                  <img src="img/swipeleft.png" width="50%" alt="swipe left"> No
+                </div>
+              <div class="sright"  ng-swipe-right="showActions = false">
+                <img src="img/swiperight.png" width="50%" alt="swipe right"> Yes
+              </div>
+
+            </div>
              <div class="imgq_imgblock"  ng-controller="imagecontroller">
-                <img ng-src="{{availableImages[currentImage].src}}" width="100%" alt="placeholder img" height="60%">
+                <!--<img ng-src="{{availableImages[currentImage].src}}" width="100%" alt="placeholder img" height="60%">-->
+
+                <div ng-show="showActions"><img src="img/hard/hard-jon.jpg" width="100%" alt="placeholder img" height="60%"></div>
+                 <div ng-show="!showActions"><img src="img/hard/hard-rob.jpg" width="100%" alt="placeholder img" height="60%"></div>
             </div>
 
 
