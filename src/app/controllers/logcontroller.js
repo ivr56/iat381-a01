@@ -42,20 +42,17 @@
       
       $scope.easy = function ()
       {
-    $scope.$apply(function() {
+  
         $rootScope.quizset = 1;
-$location.path( '/q1/');
-});
+
       }
        $scope.med = function ()
       {
            $rootScope.quizset = 2;    
-    $scope.$apply(function() {
-$location.path( '/q1/');
-});
+
       }
            $rootScope.quizset = 3;
         $scope.hard = function ()
       {
       }
-  }
+  })
