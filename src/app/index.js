@@ -18,10 +18,10 @@
               controller: 'questionscontroller'
             }).
           
-            //when('/questionsh/:questionId', {
-            //templateUrl: 'questionsh.html',
-            //controller: 'questionshcontroller'
-            //}).
+            when('/imgq_questions/:questionId', {
+            templateUrl: 'imgq_questions.html',
+            controller: 'hardq_controller'
+            }).
           
             
             when('/', {
