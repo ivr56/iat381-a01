@@ -53,7 +53,7 @@
     $rootScope.score = 0; 
     //global variable for score
     $rootScope.used = 0; 
-      $rootScope.time = 0;
+      $rootScope.timeenabled = 0;
     //global variable for corrected
     $rootScope.quizset = 0;
     $rootScope.resetcount = 0;

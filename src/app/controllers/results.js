@@ -2,7 +2,7 @@
     //------------------
     //Result Controller
    angular.module('iat381-a01')   
-    .controller('resultcontroller', function($scope, $rootScope, timerctrl) {
+    .controller('resultcontroller', function($scope, $rootScope) {
        
 
     
@@ -21,8 +21,8 @@
 
 
     console.log("End of the Road");
-    $rootScope.time = 0;
-    console.log("Time Gentlemen " + $rootScope.time);  
+    $rootScope.timeenabled = 0;
+    console.log("Time Gentlemen " + $rootScope.timeenabled);  
 
 
     $scope.rs = function()
@@ -41,7 +41,7 @@
    .controller('timerctrl',
    function($scope,$timeout, $rootScope, $routeParams,$location, quizservice) {
        
-    $scope.counter = 5;
+    $scope.counter = 15;
     
     $scope.onTimeout = function()
     {
@@ -52,7 +52,7 @@
     console.log($rootScope.used);
     
         
-    if ($rootScope.time === 1)
+    if ($rootScope.timeenabled == 1 && $scope.counter == 0)
     {
         
 console.log("Test Timeout");

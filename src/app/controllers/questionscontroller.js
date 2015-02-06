@@ -3,7 +3,7 @@
     //Questions Controller Start
     .controller('questionscontroller', function($scope,$rootScope, $routeParams,$location, quizservice) {
       
-    $rootScope.time = 1;
+    $rootScope.time = 30;
     console.log("Time Gentlemen " + $rootScope.time);  
        
       //irene testing
@@ -84,21 +84,4 @@
     })
     //------------------ 
     //Questions Controller End
-   
-     .controller('endquestionscontroller', function($scope,$rootScope, $routeParams,$location, quizservice, questionscontroller) 
-    {
-      
-       
-    //Number of Questions
-var tq_questions = 
-quizservice.getquestion(numberquestions);
-var cq_questions = 
-quizservice.getquestion(questionNumber);
-   
-       if (tq_question == cq_questions)
-       {
-        console.log("Questions to Results");
-       
-       }
-       
-   })
+
