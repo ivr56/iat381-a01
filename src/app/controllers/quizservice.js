@@ -182,7 +182,7 @@
     
         var numberofquestions;
         
-      if ($rootScope.quizset > 5)
+      if ($rootScope.quizset === 1)
       {
         console.log("Quiz 1");
         numberofquestions = questions_set1.length;
@@ -195,7 +195,7 @@
         return questions_set1[questionNumber];  
       }
     
-      else
+      else if ($rootScope.quizset === 2)
       {
         console.log("Quiz 2");
         numberofquestions = questions_set2.length;
@@ -210,4 +210,6 @@
       //------------------ 
       //Quiz Service End
        
+       
    });
+

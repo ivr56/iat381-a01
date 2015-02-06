@@ -18,6 +18,11 @@
               controller: 'questionscontroller'
             }).
           
+            //when('/questionsh/:questionId', {
+            //templateUrl: 'questionsh.html',
+            //controller: 'questionshcontroller'
+            //}).
+          
             
             when('/', {
               templateUrl: 'main.html',
