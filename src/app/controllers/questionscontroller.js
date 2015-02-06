@@ -28,8 +28,8 @@
       $scope.question = question.Question;
       $scope.answers = question.Answers;
       $scope.check = question.CheckId;
-      $scope.deck = question.imagesrc;
-   
+      $scope.deck = question.imgsrc;
+        
        
       //Change Markup 
       

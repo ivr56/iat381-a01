@@ -5,9 +5,10 @@ body{
 
 .q_bg
 {
-      background-color: #f9f9f9;
+    
   /*background-image: none;*/
-  background-image:url('../img/JonSnow.jpg');
+    background-color: #f9f9f9;
+    background-image:url('../img/JonSnow.jpg');
     height: 800px;
 }
 .questionContainer{

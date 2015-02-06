@@ -21,6 +21,7 @@
           QuestionId:1, 
           Question:"What is the name of the primary continent portrayed in Game of Thrones?",
           CheckId: 1,
+          imgsrc: "img/tpi_3.png",
           Answers: [
             {AnswerId:1, Answer:"Westeros"},
             {AnswerId:2, Answer:"Essos"},
@@ -30,7 +31,8 @@
         {
           QuestionId:2, 
           Question:"Which major family is known to always pay their debts?",
-          CheckId: 4,   
+          CheckId: 4,
+          imgsrc: "img/tpi_2.png",
           Answers: [
             {AnswerId:1, Answer:"Targaryen"},
             {AnswerId:2, Answer:"Greyjoy"},
@@ -40,7 +42,8 @@
                {
           QuestionId:3, 
           Question:"Fill in the blank: _______ is coming:",
-          CheckId: 4,   
+          CheckId: 4, 
+          imgsrc: "img/tpi_1.png",
           Answers: [
             {AnswerId:1, Answer:"Death"},
             {AnswerId:2, Answer:"Summer"},
@@ -50,7 +53,8 @@
                {
           QuestionId:4, 
           Question:"What group primarily consists of convicted criminals?",
-          CheckId: 3,   
+          CheckId: 3,
+          imgsrc: "img/tpi_3.png",
           Answers: [
             {AnswerId:1, Answer:"The Faceless Men"},
             {AnswerId:2, Answer:"The Brotherhood without Banners"},
@@ -60,7 +64,8 @@
                {
           QuestionId:5, 
           Question:"Identify the family that uses this sigil:",
-          CheckId: 2,   
+          CheckId: 2, 
+          imgsrc: "img/tpi_2.png",
           Answers: [
             {AnswerId:1, Answer:"Stark"},
             {AnswerId:2, Answer:"Lannister"},
@@ -74,6 +79,7 @@
           QuestionId:1, 
           Question:"Who was proclaimed the “King of the North”?",
           CheckId: 1,
+          imgsrc: "img/tpi_3.png",
           Answers: [
             {AnswerId:1, Answer:"Robb Stark"},
             {AnswerId:2, Answer:"Tyrion Lannister"},
@@ -83,7 +89,8 @@
         {
           QuestionId:2, 
           Question:"What is the name of the throne belonging to Balon Greyjoy?",
-          CheckId: 1,   
+          CheckId: 1,  
+          imgsrc: "img/tpi_2.png",
           Answers: [
             {AnswerId:1, Answer:"The Seastone Chair"},
             {AnswerId:2, Answer:"The Iron Throne"},
@@ -103,7 +110,8 @@
                {
           QuestionId:4, 
           Question:"Which of these is not a location in Westeros?",
-          CheckId: 4,   
+          CheckId: 4, 
+          imgsrc: "img/tpi_1.png",
           Answers: [
             {AnswerId:1, Answer:"Sunspear"},
             {AnswerId:2, Answer:"Highgarden"},
@@ -113,7 +121,8 @@
                {
           QuestionId:5, 
           Question:"What is the name of this character?",
-          CheckId: 4,   
+          CheckId: 4, 
+          imgsrc: "img/tpi_3.png",
           Answers: [
             {AnswerId:1, Answer:"Sandor Clegane"},
             {AnswerId:2, Answer:"No One"},
