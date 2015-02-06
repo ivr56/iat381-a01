@@ -35,6 +35,10 @@
               controller: 'logcontroller',
             }).
       
+            when('/qh1', {
+                redirectTo: '/imgq_questions/0'
+            }).
+
           
             when('/q1', {
                 redirectTo: '/questions/0'

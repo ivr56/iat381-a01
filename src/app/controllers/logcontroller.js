@@ -54,5 +54,6 @@
            $rootScope.quizset = 3;
         $scope.hard = function ()
       {
+        
       }
   })
