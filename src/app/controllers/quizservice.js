@@ -5,11 +5,14 @@
     .service('quizservice', function($rootScope) {
       
       var questions_set1;
-      var questions_set2;
+      var questions_set2; 
+      var length12 = 5;
+       
+    $rootScope.questioncount = length12;
+   
+      console.log("Quiz Loaded #" + $rootScope.quizset + "Number of Questons :" +  $rootScope.questioncount);
       
-      console.log("Quiz Loaded #" + $rootScope.quizset);
-      
-      
+
       //Question Array
       
       //Set #1 - EASY
@@ -175,13 +178,16 @@
       
       //Select Quiz and Set Maximum Length
       this.getquestion = function(questionNumber) {
+
+    
+        var numberofquestions;
         
-      var numberofquestions;
-      
       if ($rootScope.quizset > 5)
       {
-        console.log("Check 1");
+        console.log("Quiz 1");
         numberofquestions = questions_set1.length;
+
+          
               if (numberofquestions == questionNumber) {
           return null;
         }
@@ -191,8 +197,9 @@
     
       else
       {
-        console.log("Ckeck 2");
+        console.log("Quiz 2");
         numberofquestions = questions_set2.length;
+
               if (numberofquestions == questionNumber) {
           return null;
         }

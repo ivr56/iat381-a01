@@ -53,11 +53,13 @@
     $rootScope.score = 0; 
     //global variable for score
     $rootScope.used = 0; 
-      $rootScope.timeenabled = 0;
+      $rootScope.pagechange = 0;
+      $rootScope.timing = 0;
     //global variable for corrected
     $rootScope.quizset = 0;
     $rootScope.resetcount = 0;
     $rootScope.activeresult = 0;
+    $rootScope.questioncount = 0;
     })
 
      //start of irene testing//

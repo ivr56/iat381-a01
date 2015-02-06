@@ -3,8 +3,9 @@
   angular.module('iat381-a01')  
     .controller('logcontroller', function($scope, $rootScope) {
       
-      $rootScope.time = 0;
-      console.log("Time Gentlemen " +  $rootScope.time); 
+ $rootScope.pagechange = 0;
+    $rootScope.timing = 0;
+    console.log("Time Gentlemen: " + $rootScope.timing + "Page Change: " + $rootScope.pagechange);  
       
       //start of irene testing
       APP.scores=[];
