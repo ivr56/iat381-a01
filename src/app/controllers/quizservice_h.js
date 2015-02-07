@@ -1,8 +1,5 @@
-
-    //------------------
-    //Quiz Service Start
-    angular.module('iat381-a01',['ngRoute'])
-    .service('quizservice_h', function($rootScope) {
+angular.module('iat381-a01',['ngRoute'])
+    .service('quizservice_hard', function($rootScope) {
 
       var length21 = 5;
       $rootScope.questioncount = length21;

@@ -7,14 +7,6 @@
 </style>
 
 
-<<<<<<< HEAD
-=======
-     <link rel="stylesheet" href="styles/questions.css" type="text/css" media="screen">
-      <script src="../bower_components/angular/angular.min.js"></script>
-  <script src="../bower_components/angular-touch/angular-touch.js"></script>
-  <script src="app/js/imgq_script.js"></script>
->>>>>>> 98b07c5bdf1f4de0229d32cb4050612e8852819d
-
 </head>
 <body ng-app="iat381-a01">
 <div class="q_bg">
@@ -47,7 +39,7 @@
       </div>
 
 
-       <div class="imgq_answerContainer">
+       <div class="imgq_answerContainer" ng-controller="hardq_controller">
       <img ng-repeat="slides in slides" class="slide slide-animation" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{tinder.image}}">
        </div>
        <button class="arrow prev" href="#" ng-click"nextSlide()">Next</button>
@@ -64,13 +56,12 @@
                 <img src="img/swiperight.png" width="50%" alt="swipe right"> Yes
               </div>
             </div>
-<<<<<<< HEAD
 
              <div class="imgq_imgblock"  ng-controller="imagecontroller">
-=======
+
 
              <div class="imgq_imgblock"  ng-controller="imagecontroller" ng-swipe-left="showAction =true">
->>>>>>> 98b07c5bdf1f4de0229d32cb4050612e8852819d
+
                 <!--<img ng-src="{{availableImages[currentImage].src}}" width="100%" alt="placeholder img" height="60%">-->
 
                 <div ng-show="showActions"><img src="img/hard/hard-jon.jpg" width="100%" alt="placeholder img" height="60%"></div>
@@ -93,15 +84,13 @@
           <p class='hideID'>{{answer.AnswerId}}</p>
           <p class='answerCheck'>{{check}}</p>
         </a>-->
+        
       </div>
 </div>
 
 </div>
 
 
-       <!--- Irene End -->
-
-       <!--- Irene End ->
 
 
 </div>

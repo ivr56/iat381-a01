@@ -1,7 +1,7 @@
+//------------------
+//Questions Controller Start
    angular.module('iat381-a01')
-    //------------------
-    //Questions Controller Start
-    .controller('questionscontroller_h', function($scope,$rootScope, $routeParams,$location, quizservice_h) {
+    .controller('questionscontroller_h', function($scope,$rootScope,$routeParams,$location, quizservice_hard) {
 
     $rootScope.pagechange = 1;
     $rootScope.timing = 1;
@@ -11,9 +11,7 @@
       $scope.user=APP.user;
       //end of irene testing
 
-      var question = quizservice.getquestion(parseInt($routeParams.questionId));
-
-
+      var question = quizservice_hard.getquestion(parseInt($routeParams.questionId));
 
 
       if (question === null) {
