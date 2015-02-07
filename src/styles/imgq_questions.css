@@ -114,3 +114,24 @@ display: none;
 }
 
 
+.imgq_button{
+  z-index: 2;
+ 
+  display: inline-block;
+
+}
+
+.imgq_button .sleft{
+  position: absolute;
+  left:0%;
+   background-color: #f9f9f9;
+  border: 1px #eee solid;
+
+}
+
+.imgq_button .sright{
+  position: absolute;
+  right:0%;
+  background-color: #f9f9f9;
+  border: 1px #eee solid;
+}
