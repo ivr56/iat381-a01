@@ -22,8 +22,8 @@
             }).
 
             //Hard Question Router
-            when('/imgq_questions/:questionId', {
-            templateUrl: 'imgq_questions.html',
+            when('/imgqquestions/:questionId', {
+            templateUrl: 'imgqquestions.html',
             controller: 'questionscontrollerh'
             }).
 
@@ -41,7 +41,7 @@
 
             //Hard Question Router
             when('/qh1', {
-                redirectTo: '/imgq_questions/0'
+                redirectTo: '/imgqquestions/0'
             }).
 
             //Easy - Medium Question Router
@@ -602,66 +602,44 @@ a01.service('quizservicehard', function($rootScope) {
 
 
 
-  a01.controller('hardqcontroller', function ($scope, quizservicehard)
+  a01.controller('hardqc', function ($scope, quizservicehard)
 {
 
   //Array List of Images for Question Hard
-  $scope.tinder = [
+  $scope.slides = [
 
-      {image: 'img/hard/tpi_1.png'}, //Q1
-      {image: 'img/hard/tpi_2.png'}, //Q1
-      {image: 'img/hard/tpi_3.png'}, //Q3
-      {image: 'img/hard/tpi_4.png'}, //Q4
-      {image: 'img/hard/tpi_5.png'}, //Q5
+      {image: './img/tpi_1.png'}, //Q1
+      {image: './img/tpi_2.png'}, //Q1
+      {image: './img/tpi_3.png'}, //Q3
   ];
   //Array List of Images for Question Hard
 
 
 
   $scope.currentIndex = 0;
-  //Current Location
 
-  //Tracking Images
-  $scope.ccurrentSlideIndex = function (index)
-  {
-  $scope.currentindex = index;
-  };
+        $scope.setCurrentSlideIndex = function (index) {
+            $scope.currentIndex = index;
+        };
 
-  $scope.iscurrentSlideIndex = function (index)
-  {
-    $scope.currentindex = index;
-  };
+        $scope.isCurrentSlideIndex = function (index) {
+            return $scope.currentIndex === index;
+        };
 
+        $scope.prevSlide = function () {
+              $scope.direction = 'left';
+              $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+          };
 
-
-  //Change Images Back
-  $scope.prevSlide = funciton ()
-  {
-    $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
-    console.log("Switch Previous");
-  };
-  //Change Image Forward
-
-  $scope.nextSlide = funciton ()
-  {
-    $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
-    console.log("Switch Next");
-  };
+          $scope.nextSlide = function () {
+              $scope.direction = 'right';
+              $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+          };
 
 
 
 
-}//Controller Function End for Image Control
-
-
-
-//Animation Class
-//Aniamtion Goes Here Later
-//End Animation Class
-
-
-
-);//Controller End
+});//Controller End
 
 //End Image Controller
 //------------------
