@@ -1,9 +1,4 @@
-
-  //------------------
   //onehungrymind.com/build-sweet-photo-slider-angularjs-aniamte
-  //Image Controller Start
-  //Angualr Start
-
 angular.module('iat381-a01')
 .controller('hardq_controller', function ($scope, quizservice_h)
 {
