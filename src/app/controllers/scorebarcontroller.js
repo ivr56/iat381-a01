@@ -3,7 +3,5 @@
 
       $scope.scoring = $rootScope.score;
       $scope.correct = $rootScope.corrected;
-    
+
     })
-     
-     
