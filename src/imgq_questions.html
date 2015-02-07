@@ -1,22 +1,18 @@
 <head>
+
 <style>
 .imageblock
     {
     }
+</style>
 
-    </style>
 
-     <link rel="stylesheet" href="styles/questions.css" type="text/css" media="screen">
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular-touch.js"></script>
-  <script src="app/js/imgq_script.js"></script>
 
 </head>
-<body>
+<body ng-app="iat381-a01">
 <div class="q_bg">
 
     <div data-ng-include data-src="'scorebar.html'"></div>
-
 
     <!--- Irene Injected -->
     <!--- Irene Injected-->
@@ -40,17 +36,16 @@
       <div>
         <h3>{{question}}</h3>
 
-<<<<<<< HEAD
+
       </div>
 
 
        <div class="imgq_answerContainer">
       <img ng-repeat="slides in slides" class="slide slide-animation" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{tinder.image}}">
        </div>
-       <a class="arrow prev" href="#" ng-click"nextSlide()"></a>
-       <a class="arrow next" href="#" ng-click"prevSlide()"></a>
-=======
-       
+       <button class="arrow prev" href="#" ng-click"nextSlide()">Next</button>
+       <button class="arrow next" href="#" ng-click"prevSlide()">Previous</button>
+
 
       <!-- Irene: added/change class name-->
        <div class="imgq_answerContainer" ng-app="ngSwipeQuiz">
@@ -61,15 +56,15 @@
               <div class="sright"  ng-swipe-right="showActions = false">
                 <img src="img/swiperight.png" width="50%" alt="swipe right"> Yes
               </div>
-
             </div>
+
              <div class="imgq_imgblock"  ng-controller="imagecontroller">
                 <!--<img ng-src="{{availableImages[currentImage].src}}" width="100%" alt="placeholder img" height="60%">-->
 
                 <div ng-show="showActions"><img src="img/hard/hard-jon.jpg" width="100%" alt="placeholder img" height="60%"></div>
                  <div ng-show="!showActions"><img src="img/hard/hard-rob.jpg" width="100%" alt="placeholder img" height="60%"></div>
             </div>
->>>>>>> 0eef4a02e250b6de1f184933966a1bd7bc2877cf
+
 
 <!--- New Carsouel End -->
 

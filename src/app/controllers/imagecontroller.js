@@ -41,13 +41,14 @@ angular.module('iat381-a01')
   $scope.prevSlide = funciton ()
   {
     $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+    console.log("Switch Previous");
   };
   //Change Image Forward
 
   $scope.nextSlide = funciton ()
   {
     $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
-
+    console.log("Switch Next");
   };
 
 

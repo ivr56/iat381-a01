@@ -22,7 +22,7 @@
             //Hard Question Router
             when('/imgq_questions/:questionId', {
             templateUrl: 'imgq_questions.html',
-            controller: 'quizservice_h'
+            controller: 'questionscontroller_h'
             }).
 
             //Main View Router
