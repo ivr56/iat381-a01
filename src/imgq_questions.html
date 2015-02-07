@@ -3,32 +3,28 @@
 .imageblock
     {
     }
-    
+
     </style>
 
      <link rel="stylesheet" href="styles/questions.css" type="text/css" media="screen">
 </head>
 <body>
 <div class="q_bg">
-    
-    <div data-ng-include data-src="'scorebar.html'"></div>
 
-    
+    <div data-ng-include data-src="'scorebar.html'"></div>
 
 
     <!--- Irene Injected -->
-
     <!--- Irene Injected-->
 
-  
+
 <div class="imgq_quizpgcontainer">
 <!-- added/change class name-->
 <div class="jumbotron text-center">
 
-
         <!-- start of irene testing-->
-                
-                    <!-- <p>{{user.name}}</p>-->
+
+        <!-- <p>{{user.name}}</p>-->
 
         <!-- end of irene testing line-->
 
@@ -39,23 +35,24 @@
     <!-- added/change class name-->
       <div>
         <h3>{{question}}</h3>
-       
+
       </div>
 
 
-
-      <!-- Irene: added/change class name-->
        <div class="imgq_answerContainer">
-             <div class="imgq_imgblock"  ng-controller="imagecontroller">
-                <img ng-src="{{availableImages[currentImage].src}}" width="100%" alt="placeholder img" height="60%">
-            </div>
+      <img ng-repeat="slides in slides" class="slide slide-animation" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{tinder.image}}">
+       </div>
+       <a class="arrow prev" href="#" ng-click"nextSlide()"></a>
+       <a class="arrow next" href="#" ng-click"prevSlide()"></a>
+
+<!--- New Carsouel End -->
 
 
-        <!--<a 
-          ng-repeat="answer in answers" 
-          style="display:block; color:blue" 
+        <!--<a
+          ng-repeat="answer in answers"
+          style="display:block; color:blue"
           ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">-->
-          
+
           <!-- Irene: added/change class name-->
           <!-- <p class="answerBlock">
              {{answer.Answer}}
@@ -75,7 +72,7 @@
 
 
 </div>
-    
+
 </div>
 
 
