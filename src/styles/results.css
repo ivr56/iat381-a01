@@ -10,8 +10,9 @@ body{
     background-position: center;
     background-attachment: fixed;
     width: 100%;
-    height: 800px;
+    height: 100%;
     margin-top: 0;
+     overflow-y: hidden;
 
 }
 
@@ -85,15 +86,20 @@ height: 40;
   margin-right: auto;
 }
 
-.detailresult p{
+.detailresult p {
   border-bottom: 1px solid #fff;
   display: inline-block;
   width: 80%;
   color: orange;
-  
+  font-size: 8px;
 
 
 }
+.jumbotron p{
+  font-size: 18px !important;; 
+}
+
+
 #displaypoints{
   margin-bottom: 40px;
   text-align: left;

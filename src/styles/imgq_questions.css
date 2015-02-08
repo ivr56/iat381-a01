@@ -1,5 +1,8 @@
-body{
-
+html, body {
+  overflow-y: hidden;
+}
+body {
+  position: relative
 }
 
 
