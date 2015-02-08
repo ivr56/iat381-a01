@@ -2,6 +2,10 @@ body{
 
 }
 
+.qcontainer
+{
+	overflow: hidden;
+}
 
 
 .imgq_questionContainer{
@@ -61,11 +65,11 @@ width: 100%;
 height:80px;
 border-radius: 0 !important;
 border: 1px solid #194775;
-    
+
 }
 
 .btn:hover{
- background-color: #194775;   
+ background-color: #194775;
  border: 1px solid #194775;
 }
 
@@ -116,7 +120,7 @@ display: none;
 
 .imgq_button{
   z-index: 2;
- 
+
   display: inline-block;
 
 }
