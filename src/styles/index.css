@@ -1,6 +1,11 @@
+html{
+  overflow:hidden;
+}
+
 body{ 
 font-family: "Baskerville";
-overflow-y: hidden;
+overflow:hidden;
+
 }
 .main_bg
 {
@@ -11,8 +16,8 @@ overflow-y: hidden;
 	font-family: "Baskerville";
 	font-size: 14px;
     width: 100%;
-    height: 800px;
-    overflow-y: hidden;
+    height: 710px;
+    overflow:hidden;
 }
 
 
@@ -34,7 +39,6 @@ overflow-y: hidden;
 
 #headtext .jumbotron{
 	background-color: transparent;
-  overflow-y: hidden;
 }
 
 .jumbotron{
