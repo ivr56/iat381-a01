@@ -193,7 +193,7 @@ $rootScope.questioncount = length12;
       QuestionId:1,
       Question:"What is the name of the primary continent portrayed in Game of Thrones?",
       CheckId: 1,
-      imgsrc: "img/tpi_3.png",
+      imgsrc: "img/redkeep.jpg",
       Answers: [
         {AnswerId:1, Answer:"Westeros"},
         {AnswerId:2, Answer:"Essos"},
@@ -204,7 +204,7 @@ $rootScope.questioncount = length12;
       QuestionId:2,
       Question:"Which major family is known to always pay their debts?",
       CheckId: 4,
-      imgsrc: "img/tpi_2.png",
+      imgsrc: "img/family.jpg",
       Answers: [
         {AnswerId:1, Answer:"Targaryen"},
         {AnswerId:2, Answer:"Greyjoy"},
@@ -215,7 +215,7 @@ $rootScope.questioncount = length12;
       QuestionId:3,
       Question:"Fill in the blank: _______ is coming:",
       CheckId: 4,
-      imgsrc: "img/tpi_1.png",
+      imgsrc: "img/winter.jpg",
       Answers: [
         {AnswerId:1, Answer:"Death"},
         {AnswerId:2, Answer:"Summer"},
@@ -226,7 +226,7 @@ $rootScope.questioncount = length12;
       QuestionId:4,
       Question:"What group primarily consists of convicted criminals?",
       CheckId: 3,
-      imgsrc: "img/tpi_3.png",
+      imgsrc: "img/thewall.jpg",
       Answers: [
         {AnswerId:1, Answer:"The Faceless Men"},
         {AnswerId:2, Answer:"The Brotherhood without Banners"},
@@ -236,8 +236,8 @@ $rootScope.questioncount = length12;
            {
       QuestionId:5,
       Question:"Identify the family that uses this sigil:",
-      CheckId: 2,
-      imgsrc: "img/tpi_2.png",
+      CheckId: 3,
+      imgsrc: "img/nightisdark.png",
       Answers: [
         {AnswerId:1, Answer:"Stark"},
         {AnswerId:2, Answer:"Lannister"},
@@ -251,7 +251,7 @@ $rootScope.questioncount = length12;
       QuestionId:1,
       Question:"Who was proclaimed the “King of the North”?",
       CheckId: 1,
-      imgsrc: "img/tpi_3.png",
+      imgsrc: "img/thenorth.jpg",
       Answers: [
         {AnswerId:1, Answer:"Robb Stark"},
         {AnswerId:2, Answer:"Tyrion Lannister"},
@@ -262,7 +262,7 @@ $rootScope.questioncount = length12;
       QuestionId:2,
       Question:"What is the name of the throne belonging to Balon Greyjoy?",
       CheckId: 1,
-      imgsrc: "img/tpi_2.png",
+      imgsrc: "img/ironislands.jpg",
       Answers: [
         {AnswerId:1, Answer:"The Seastone Chair"},
         {AnswerId:2, Answer:"The Iron Throne"},
@@ -273,6 +273,7 @@ $rootScope.questioncount = length12;
       QuestionId:3,
       Question:"Which house is identified by a sigil of a flayed man?",
       CheckId: 1,
+      imgsrc: "img/bolton.jpg",
       Answers: [
         {AnswerId:1, Answer:"House Bolton"},
         {AnswerId:2, Answer:"House Martell"},
@@ -283,7 +284,7 @@ $rootScope.questioncount = length12;
       QuestionId:4,
       Question:"Which of these is not a location in Westeros?",
       CheckId: 4,
-      imgsrc: "img/tpi_1.png",
+      imgsrc: "img/bravos.png",
       Answers: [
         {AnswerId:1, Answer:"Sunspear"},
         {AnswerId:2, Answer:"Highgarden"},
@@ -292,14 +293,14 @@ $rootScope.questioncount = length12;
       ]},
            {
       QuestionId:5,
-      Question:"What is the name of this character?",
+      Question:"What is Hodor's real name?",
       CheckId: 4,
-      imgsrc: "img/tpi_3.png",
+      imgsrc: "img/hodor.jpg",
       Answers: [
-        {AnswerId:1, Answer:"Sandor Clegane"},
-        {AnswerId:2, Answer:"No One"},
+        {AnswerId:1, Answer:"Edmund"},
+        {AnswerId:2, Answer:"Gendry"},
         {AnswerId:3, Answer:"Daario Naharis"},
-        {AnswerId:4, Answer:"Jaqen H'ghar"}
+        {AnswerId:4, Answer:"Walder"}
       ]}
 
   ];
@@ -509,8 +510,19 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
 
         $scope.slides = [
             {
-            image: 'img/tpi_1.png',         //Image
-            question: 'Man01',              //Question
+            image: 'img/hard/hard-tyrion.jpg',         //Image
+            question: 'Tyrion Lannister',              //Question
+            questionID: 2, //QuestionID
+            correct:1, //CorrectID
+            answer_a:1, //AnswerID
+            answer_d:2, //AnswerID
+            answer_ad: "alive", //Answer String
+            answer_dd: "dead" //Answer String
+            },
+
+            {
+            image: 'img/hard/hard-jon.jpg',
+            question: 'Jon Snow',
             questionID: 1, //QuestionID
             correct:1, //CorrectID
             answer_a:1, //AnswerID
@@ -520,21 +532,33 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
             },
 
             {
-            image: 'img/tpi_2.png',
-            question: 'Man02',
-            questionID: 2, //QuestionID
+            image: 'img/hard/hard-rob.jpg',
+            question: 'Rob Stark',
+            questionID: 3,
             correct:2, //CorrectID
             answer_a:1, //AnswerID
             answer_d:2, //AnswerID
             answer_ad: "alive", //Answer String
             answer_dd: "dead" //Answer String
-            },
+          },
 
             {
-            image: 'img/tpi_3.png',
-            question: 'Man03',
-            questionID: 3,
-            correct:1, //CorrectID
+            image: 'img/hard/hard-shae.jpg',
+            question: 'Shae',
+            questionID: 4,
+            correct:2, //CorrectID
+            answer_a:1, //AnswerID
+            answer_d:2, //AnswerID
+            answer_ad: "alive", //Answer String
+            answer_dd: "dead" //Answer String
+          },
+
+
+            {
+            image: 'img/hard/hard-viper.jpg',
+            question: 'Oberyn Martell',
+            questionID: 5,
+            correct:2, //CorrectID
             answer_a:1, //AnswerID
             answer_d:2, //AnswerID
             answer_ad: "alive", //Answer String
@@ -544,7 +568,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
         ];
 
           //Defult Location
-          $scope.currentIndex = 1;
+          $scope.currentIndex = 0;
 
 
           //Set ng-Hide
