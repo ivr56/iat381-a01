@@ -76,6 +76,15 @@
     $rootScope.resetcount = 0;
     $rootScope.activeresult = 0;
     $rootScope.questioncount = 0;
+
+    //Global Variables for Hard Question Passthrough for Time + Page Control
+    $rootScope.$on('handleEmit_h', function(event, args) {
+      $rootScope.$broadcast('handleBroadcast_h', args);
+  });
+
+  $rootScope.$on('handleEmit_ha', function(event, args) {
+    $rootScope.$broadcast('handleBroadcast_ha', args);
+});
   });
 
     //start of irene testing//
@@ -438,53 +447,25 @@ $rootScope.questioncount = length12;
 
         questions_set3 = [
           {
-            QuestionId:1, //ID
-            correct:1, //CorrectID
-            answer_a:1, //AnswerID
-            answer_d:2, //AnswerID
-            answer_ad: "alive", //Answer String
-            answer_dd: "dead" //Answer String
-
+            QuestionId:1
           },
 
             {
             QuestionId:2,
 
-            correct:2,                      //Correct ID
-            answer_a:1,
-            answer_d:2,
-            answer_ad: "alive",
-            answer_dd: "dead"
+            correct:2
             },
 
             {
-            QuestionId:3,
-
-            correct:1,                      //Correct ID
-            answer_a:1,
-            answer_d:2,
-            answer_ad: "dead",
-            answer_dd: "dead"
+            QuestionId:3
             },
 
             {
-            QuestionId:4,
-
-            correct:1,                      //Correct ID
-            answer_a:1,
-            answer_d:2,
-            answer_ad: "alive",
-            answer_dd: "dead"
+            QuestionId:4
             },
 
             {
-            QuestionId:5,
-
-            correct:1,                      //Correct ID
-            answer_a:1,
-            answer_d:2,
-            answer_ad: "alive",
-            answer_dd: "dead"
+            QuestionId:5
             }
         ];
 
@@ -520,7 +501,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
         $rootScope.pagechange = 2;
         $rootScope.timing = 1;
         console.log("Time Gentlemen: " + $rootScope.timing + "Page Change: " + $rootScope.pagechange);
-
+        console.log("Score :" + $rootScope.score);
 
         //------------------
         //Hard Questions Slider Start
@@ -530,6 +511,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
             {
             image: 'img/tpi_1.png',         //Image
             question: 'Man01',              //Question
+            questionID: 1, //QuestionID
             correct:1, //CorrectID
             answer_a:1, //AnswerID
             answer_d:2, //AnswerID
@@ -540,6 +522,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
             {
             image: 'img/tpi_2.png',
             question: 'Man02',
+            questionID: 2, //QuestionID
             correct:2, //CorrectID
             answer_a:1, //AnswerID
             answer_d:2, //AnswerID
@@ -550,6 +533,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
             {
             image: 'img/tpi_3.png',
             question: 'Man03',
+            questionID: 3,
             correct:1, //CorrectID
             answer_a:1, //AnswerID
             answer_d:2, //AnswerID
@@ -560,7 +544,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
         ];
 
           //Defult Location
-          $scope.currentIndex = 0;
+          $scope.currentIndex = 1;
 
 
           //Set ng-Hide
@@ -599,6 +583,31 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
 
           //Change Markup
 
+          $scope.$on('handleBroadcast_h', function(event, args) {
+        if (args.message === 1)
+            {
+
+              if ($rootScope.used === 5)
+              {
+                console.log("Quiz 3 Completed");
+                $location.path( '/result/' );
+                $rootScope.pagechange = 0;
+              }
+              else
+              {
+                $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+
+                console.log("Swap on Time Out");
+                console.log("Swap Count :" + $rootScope.used);
+              }
+
+            }
+
+
+
+        });
+
+
 
 
 
@@ -623,7 +632,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                   console.log("Correct");
                   $rootScope.score =  $rootScope.score + 100;
                   console.log("Hard Part 2 :" + $rootScope.score);
-                  $rootScope.used = $rootScope.used + 1;
+
                   }
 
                   else
@@ -631,7 +640,8 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                    console.log("In-Correct");
                   $rootScope.score =  $rootScope.score + 0;
                   console.log("Hard Part 2 :" + $rootScope.score);
-                     $rootScope.used = $rootScope.used + 1;
+
+
                   }
 
                   ///Next Question
@@ -642,8 +652,9 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
 
                   $rootScope.answered = 1;
                   $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
-
-
+                  $rootScope.used = $rootScope.used + 1;
+                  console.log("Score Post Answer:" + $rootScope.score);
+                  $scope.$emit('handleEmit_ha', {message: 1});
 
 
                     //start of irene testing
@@ -656,6 +667,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                    //end of irene testing line
 
                 };
+
 
 
 
@@ -709,18 +721,12 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
   })
 
 
-  a01.controller('timectrl_view',
-   function($scope,$timeout, $rootScope, $routeParams,$location, quizservice) {
-    console.log(timectrl.timesup);
-
-
-  });
-
-
+//----------------
+//Easy Medium Time Controller
    a01.controller('timerctrl',
    function($scope,$timeout, $rootScope, $routeParams,$location, quizservice) {
 
-var timesup;
+     var timesup;
     if ($rootScope.pagechange === 0)
     {
         console.log("New View at 0");
@@ -733,6 +739,7 @@ var timesup;
         $scope.counter = 5;
 
 
+
     $scope.onTimeout = function()
     {
 
@@ -743,8 +750,7 @@ var timesup;
     var mycountdown =  $timeout($scope.onTimeout,1000);
 
 
-    }//Time Enabled
-
+  }//Time Enabled for Easy and Medium
 
 
 
@@ -767,12 +773,91 @@ $scope.$apply(function() {
 $location.path( '/questions/' + nextQuestionId );
 });
 
-    console.log("Cleared");
-    $timeout.cancel(timesup);
 
 
+if ($rootScope.used === 5)
+{
+  $timeout.cancel(timesup);
+}
+else
+{
+  console.log("Cleared");
+  $timeout.cancel(timesup);
+}
 
     }
  });
- //End Results
+ //End Easy Medium Time Controller
  //----------------
+
+
+
+ //----------------
+ //Hard Time Controller
+    a01.controller('timerctrlh',
+    function($scope,$timeout, $rootScope, $routeParams,$location, quizservicehard) {
+    var doubleswap = 0;
+    var timesup;
+     if ($rootScope.pagechange === 0)
+     {
+         console.log("New View at 0");
+     } //Timer Disabled
+
+
+     else if ($rootScope.pagechange === 2)
+     {
+         startclockh();
+
+
+     $scope.onTimeouth = function()
+     {
+
+       $scope.counterh--;
+     mytimeouth = $timeout($scope.onTimeouth,1000);
+
+     }
+
+     var mycountdownh =  $timeout($scope.onTimeouth,1000);
+
+
+
+     }
+
+
+
+     function startclockh()
+        {
+            console.log("Start Clock");
+            timesuph = setTimeout(callTimeouth, 5000);
+            console.log(timesuph);
+            $scope.counterh = 5;
+
+        }
+
+
+
+
+     function callTimeouth()
+     {
+     console.log("Hard Timeout : Question Incorrect");
+    
+     $rootScope.used = 5;
+       if ($rootScope.used === 5 && doubleswap === 0)
+       {
+         $scope.$emit('handleEmit_h', {message: 1});
+         console.log("You Ran out of Time");
+         $timeout.cancel(timesuph);
+       }
+       else
+       {
+         $scope.$emit('handleEmit_h', {message: 1});
+         console.log("Cleared");
+         $timeout.cancel(timesuph);
+         startclockh();
+       }
+
+
+     }
+  });
+  //End Easy Medium Time Controller
+  //----------------
