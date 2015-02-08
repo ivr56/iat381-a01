@@ -134,6 +134,7 @@ display: none;
   top:50%;
    background-color: #f9f9f9;
   border: 1px #eee solid;
+   padding-top: 10px;
 
 }
 
@@ -143,4 +144,6 @@ display: none;
    top:50%;
   background-color: #f9f9f9;
   border: 1px #eee solid;
+  padding-top: 10px;
 }
+

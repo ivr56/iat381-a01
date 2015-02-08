@@ -2,15 +2,17 @@
 /* when hiding the thing */
 .ng-hide-add         {
   -webkit-animation:0.5s bounceInLeft ease;
-  animation:0.5s bounceInLeft ease;
+  animation:0.1s bounceInLeft ease;
+
 }
 
 /* when showing the thing */
 .ng-hide-remove      {
-  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-  animation-delay: 0.85s;
+ 
   -webkit-animation: 0.5s bounceOutRight ease;
   animation: 0.5s bounceOutRight ease;
+   display: none;
+ 
 }
 
 /* ANIMATIONS (FROM ANIMATE.CSS) */
