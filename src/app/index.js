@@ -167,6 +167,7 @@
 
     $scope.scoring = $rootScope.score;
     $scope.correct = $rootScope.corrected;
+    $scope.finalscore = $rootScope.score/100;
 
   });
 
