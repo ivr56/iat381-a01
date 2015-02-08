@@ -1,6 +1,3 @@
-body{
-
-}
 
 
 .q_bg
@@ -97,12 +94,14 @@ border: 1px solid #194775;
   display: inline-block;
   height: 90%;
 
+
 }
 .container .jumbotron{
 	padding: 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .buttondemoBasicUsage {
@@ -146,3 +145,6 @@ display: none;
 }
 
 
+h3{
+  font-size: 18px !important;
+}
