@@ -1,3 +1,4 @@
+<!--- Duplicate for Hard Questions -->
   <body>
     <div id="scorebar" ng-controller="scorebarcontroller">
             <div class="backArrow">
@@ -6,11 +7,11 @@
             </div>
 
             <div class="bar_qnumber">
-                {{question_num}}/5
+                {{currentIndex}}/5
             </div>
         <div class="bar_timer">
-            <div ng-controller="timerctrl">
-                {{counter}}</div>
+            <div ng-controller="timerctrlh">
+                {{counterh}}</div>
             </div>
         <div class="bar_score">
             {{scoring}}

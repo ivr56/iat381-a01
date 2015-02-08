@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="iat381-a01">
   <head>
     <meta charset="utf-8">
     <title>iat381A01</title>
@@ -8,7 +8,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
 
     <!--- Dont Touch this mess Below -->
     <!-- bower:css -->
@@ -20,11 +19,14 @@
     <!-- inject:css -->
     <!-- css files will be automaticaly insert here -->
     <!-- endinject -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylehseet" type="text/css" href="../bower_components/angular-transitions/css/view/1.2.0/animations.css">
+
     <!-- endbuild -->
     <!--- End Mess -->
   </head>
 
-  <body ng-app="iat381-a01">
+  <body>
     <!--[if lt IE 10]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -35,11 +37,12 @@
     <h3>{{score}}</h3>
       -->
       <div class="main_bg">
+
     <div class="maincontainer">
     <div ng-view=""></div>
     </div>
 </div>
-  </body>
+
 
 
     <!--- Dont Touch this mess Below -->
@@ -53,10 +56,12 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
     <!-- js files will be automaticaly insert here -->
     <!-- endinject -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <!-- inject:partials -->
     <!-- angular templates will be automatically converted in js and inserted here -->
