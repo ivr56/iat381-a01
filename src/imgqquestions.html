@@ -29,24 +29,31 @@
         <!-- end of irene testing line-->
 
   <div class="imgq_questionContainer">
-      <div>
-        Question Number: {{questionnumber}}
-      </div>
-    <!-- added/change class name-->
-      <div>
-        <h3>{{question}}</h3>
 
-
+        <h2>Question Number: {{hquestionnumber}}</h2>
+        <h3>{{hquestion}}</h3>
       </div>
 
       <!-- Irene: Your stuff is backed up in my notepad for what was here-->
-      <div class="..." ng-controller="...">
+      <div>
+      <img ng-src="{{hdeck}}" width="100%" alt="placeholder img" height="60%"></div>
+
+      <flex-slider slide="s in slides" animation="slide">
+        <li>
+          <img ng-src="{{s}}">
+
+          <a>Alive</a>
+          <a>{{answer.hanswers}}</a>
+          <a>{{answer.hanswers}}</a>
+          <a>{{hcheck}}</a>
+
+        </li>
+
+      </flex-slider>
+
         <!-- Placeholder for new Module. Div + Image Slider-->
         <!-- Individual Buttons for Selection -->
       </div>
-
-
-
 
 
       </div>
