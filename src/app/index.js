@@ -840,7 +840,7 @@ else
      function callTimeouth()
      {
      console.log("Hard Timeout : Question Incorrect");
-    
+
      $rootScope.used = 5;
        if ($rootScope.used === 5 && doubleswap === 0)
        {
@@ -855,7 +855,6 @@ else
          $timeout.cancel(timesuph);
          startclockh();
        }
-
 
      }
   });
