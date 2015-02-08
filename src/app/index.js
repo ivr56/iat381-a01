@@ -2,7 +2,7 @@
   //------------------
   //Index.js Start
   //Angualr Start
-  var a01 = angular.module('iat381-a01', ['ngRoute', 'angular-flexslider']);
+  var a01 = angular.module('iat381-a01', ['ngRoute', 'ngAnimate',]);
 
 
     a01.config(['$routeProvider',
@@ -91,7 +91,7 @@
     APP.scores = [];
     //end of irene testing line
     //End Index.js
-    //------------------
+
 
 
     //Star Injection
@@ -426,7 +426,6 @@ $rootScope.questioncount = length12;
 
 
 
-
   a01.service('quizservicehard', function($rootScope) {
 
         var length21 = 5;
@@ -530,11 +529,11 @@ $rootScope.questioncount = length12;
 
 
         //Change Markup
-        $scope.hquestionnumber = $routeParams.questionId;
-        $scope.hquestion_num = question.QuestionId;
-        $scope.hquestion = question.Question;
-        $scope.hanswers = question.Answers;
-        $scope.hcheck = question.CheckId;
+        $scope.questionnumber = $routeParams.questionId;
+        $scope.question = question.QuestionId;
+        $scope.question = question.Question;
+        $scope.answers = question.Answers;
+        $scope.check = question.CheckId;
         $scope.hdeck = question.imgsrc;
 
 
@@ -544,7 +543,59 @@ $rootScope.questioncount = length12;
 
 
 
-      })
+        $scope.answerquestionh = function(answerid, answer, checking) {
+          console.log("Hard user answered with: " + answerid);
+          console.log("Hard CPU answered with: " + checking);
+
+            //start of irene testing
+            var isCorrect=false;
+
+           //end of irene testing line
+
+          //Check Answer
+          if (answerid === checking)
+          {
+
+            //start of irene testing
+            isCorrect=true;
+
+           //end of irene testing line
+          console.log("Correct");
+          $rootScope.score =  $rootScope.score + 100;
+          console.log("Hard Part 2 :" + $rootScope.score);
+          $rootScope.used = $rootScope.used + 1;
+          }
+          else
+          {
+           console.log("In-Correct");
+          $rootScope.score =  $rootScope.score + 0;
+          console.log("Hard Part 2 :" + $rootScope.score);
+             $rootScope.used = $rootScope.used + 1;
+          }
+          ///Next Question
+
+
+          var nextQuestionId = parseInt($routeParams.questionId) + 1;
+          $location.path( '/imgqquestions/' + nextQuestionId );
+          $rootScope.answered = 1;
+
+            //start of irene testing
+            APP.scores.push({
+              id:answerid, answer:answer, correct:isCorrect
+            })
+
+            console.log(APP.scores);
+
+           //end of irene testing line
+
+        };
+
+
+
+
+
+
+      });
       //------------------
       //Hard Questions Controller End
 

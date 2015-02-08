@@ -8,8 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../bower_components/flexslider/flexslider.css">
+
     <!--- Dont Touch this mess Below -->
     <!-- bower:css -->
     <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
@@ -20,6 +19,9 @@
     <!-- inject:css -->
     <!-- css files will be automaticaly insert here -->
     <!-- endinject -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylehseet" type="text/css" href="../bower_components/angular-transitions/css/view/1.2.0/animations.css">
+
     <!-- endbuild -->
     <!--- End Mess -->
   </head>
@@ -35,6 +37,7 @@
     <h3>{{score}}</h3>
       -->
       <div class="main_bg">
+
     <div class="maincontainer">
     <div ng-view=""></div>
     </div>

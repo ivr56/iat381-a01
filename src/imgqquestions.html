@@ -9,10 +9,9 @@
 
 </head>
 <body>
-
 <div class="q_bg">
 
-    <!-- <div data-ng-include data-src="'scorebar.html'"></div>-->
+    <!-- <div data-ng-include data-src="'scorebar.html'"></div>
 
     <!--- Irene Injected -->
     <!--- Irene Injected-->
@@ -30,40 +29,32 @@
 
   <div class="imgq_questionContainer">
 
+
+
+    <div>
         <h2>Question Number: {{hquestionnumber}}</h2>
         <h3>{{hquestion}}</h3>
+        <img ng-src="{{hdeck}}" width="100%" alt="placeholder img" height="60%">
+
+        <a
+          ng-repeat="answer in answers"
+          style="display:block; color:blue"
+          ng-click="answerquestionh(answer.AnswerId, answer.Answer, check)">
+
+          <!-- Irene: added/change class name-->
+          <p class="answerBlock">{{answer.Answer}}</p>
+          <p class='hideID'>{{answer.AnswerId}}</p>
+          <p class='answerCheck'>{{hcheck}}</p>
+        </a>
+
+    </div>
+</div>
       </div>
 
+    </div>
+    </div>
       <!-- Irene: Your stuff is backed up in my notepad for what was here-->
-      <div>
-      <img ng-src="{{hdeck}}" width="100%" alt="placeholder img" height="60%"></div>
-
-      <flex-slider slide="s in slides" animation="slide">
-        <li>
-          <img ng-src="{{s}}">
-
-          <a>Alive</a>
-          <a>{{answer.hanswers}}</a>
-          <a>{{answer.hanswers}}</a>
-          <a>{{hcheck}}</a>
-
-        </li>
-
-      </flex-slider>
-
-        <!-- Placeholder for new Module. Div + Image Slider-->
-        <!-- Individual Buttons for Selection -->
-      </div>
 
 
-      </div>
-</div>
-
-</div>
-
-
-
-
-</div>
 
 </body>
