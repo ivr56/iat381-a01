@@ -438,54 +438,54 @@ $rootScope.questioncount = length12;
 
         questions_set3 = [
           {
-            QuestionId:1,
-            Question:"Man01",
-            imgsrc: "img/tpi_1.png",
-            CheckId: 1,
-            Answers: [
-              {AnswerId:1, Answer:"Dead"},
-              {AnswerId:2, Answer:"Alive"}
-            ]},
+            QuestionId:1, //ID
+            correct:1, //CorrectID
+            answer_a:1, //AnswerID
+            answer_d:2, //AnswerID
+            answer_ad: "alive", //Answer String
+            answer_dd: "dead" //Answer String
 
-          {
+          },
+
+            {
             QuestionId:2,
-            Question:"Man02",
-            imgsrc: "img/tpi_2.png",
-            CheckId: 1,
-            Answers: [
-              {AnswerId:1, Answer:"Dead"},
-              {AnswerId:2, Answer:"Alive"}
-            ]},
+
+            correct:2,                      //Correct ID
+            answer_a:1,
+            answer_d:2,
+            answer_ad: "alive",
+            answer_dd: "dead"
+            },
 
             {
             QuestionId:3,
-            Question:"Man03",
-            imgsrc: "img/tpi_3.png",
-            CheckId: 1,
-            Answers: [
-              {AnswerId:1, Answer:"Dead"},
-              {AnswerId:2, Answer:"Alive"}
-            ]},
+
+            correct:1,                      //Correct ID
+            answer_a:1,
+            answer_d:2,
+            answer_ad: "dead",
+            answer_dd: "dead"
+            },
 
             {
             QuestionId:4,
-            Question:"Man04",
-            imgsrc: "img/tpi_1.png",
-            CheckId: 1,
-            Answers: [
-              {AnswerId:1, Answer:"Dead"},
-              {AnswerId:2, Answer:"Alive"}
-            ]},
+
+            correct:1,                      //Correct ID
+            answer_a:1,
+            answer_d:2,
+            answer_ad: "alive",
+            answer_dd: "dead"
+            },
 
             {
             QuestionId:5,
-            Question:"Man05",
-            CheckId: 1,
-            imgsrc: "img/tpi_2.png",
-            Answers: [
-              {AnswerId:1, Answer:"Dead"},
-              {AnswerId:2, Answer:"Alive"}
-            ]}
+
+            correct:1,                      //Correct ID
+            answer_a:1,
+            answer_d:2,
+            answer_ad: "alive",
+            answer_dd: "dead"
+            }
         ];
 
         //Select Quiz and Set Maximum Length
@@ -507,117 +507,56 @@ $rootScope.questioncount = length12;
 
 
 
-  //------------------
-  //Hard Questions Controller Start
 
-      a01.controller('questionscontrollerh', function($scope,$rootScope,$routeParams,$location, quizservicehard) {
-
-      $rootScope.pagechange = 2;
-      $rootScope.timing = 1;
-      console.log("Time Gentlemen: " + $rootScope.timing + "Page Change: " + $rootScope.pagechange);
-
-        //irene testing
-        $scope.user=APP.user;
-        //end of irene testing
-
-        var question = quizservicehard.getquestion(parseInt($routeParams.questionId));
-
-
-        if (question === null) {
-            $location.path( '/result/' );
-        }
-
-
-        //Change Markup
-        $scope.questionnumber = $routeParams.questionId;
-        $scope.question = question.QuestionId;
-        $scope.question = question.Question;
-        $scope.answers = question.Answers;
-        $scope.check = question.CheckId;
-        $scope.hdeck = question.imgsrc;
-
-
-        //Change Markup
-
-        //Change Markup
-
-
-
-        $scope.answerquestionh = function(answerid, answer, checking) {
-          console.log("Hard user answered with: " + answerid);
-          console.log("Hard CPU answered with: " + checking);
-
-            //start of irene testing
-            var isCorrect=false;
-
-           //end of irene testing line
-
-          //Check Answer
-          if (answerid === checking)
-          {
-
-            //start of irene testing
-            isCorrect=true;
-
-           //end of irene testing line
-          console.log("Correct");
-          $rootScope.score =  $rootScope.score + 100;
-          console.log("Hard Part 2 :" + $rootScope.score);
-          $rootScope.used = $rootScope.used + 1;
-          }
-          else
-          {
-           console.log("In-Correct");
-          $rootScope.score =  $rootScope.score + 0;
-          console.log("Hard Part 2 :" + $rootScope.score);
-             $rootScope.used = $rootScope.used + 1;
-          }
-          ///Next Question
-
-
-          var nextQuestionId = parseInt($routeParams.questionId) + 1;
-          $location.path( '/imgqquestions/' + nextQuestionId );
-          $rootScope.answered = 1;
-
-            //start of irene testing
-            APP.scores.push({
-              id:answerid, answer:answer, correct:isCorrect
-            })
-
-            console.log(APP.scores);
-
-           //end of irene testing line
-
-        };
-
-
-
-      });
-      //------------------
-      //Hard Questions Controller End
 
 
       //Slider Inspired by
       //http://onehungrymind.com/build-sweet-photo-slider-angularjs-animate/
       //Build Sweet Photo Slider With AngularJS Aniamte
 
-a01.controller('MainCtrl', function ($scope) {
+a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,$location, quizservicehard) {
 
+        //Timer Style 2
+        $rootScope.pagechange = 2;
+        $rootScope.timing = 1;
+        console.log("Time Gentlemen: " + $rootScope.timing + "Page Change: " + $rootScope.pagechange);
+
+
+        //------------------
+        //Hard Questions Slider Start
         //Slide Array: Questions + Options
+
         $scope.slides = [
-            {image: 'img/tpi_1.png',
-            description: 'Image 00',
-            question: 'Man01'
+            {
+            image: 'img/tpi_1.png',         //Image
+            question: 'Man01',              //Question
+            correct:1, //CorrectID
+            answer_a:1, //AnswerID
+            answer_d:2, //AnswerID
+            answer_ad: "alive", //Answer String
+            answer_dd: "dead" //Answer String
             },
 
-            {image: 'img/tpi_2.png',
-            description: 'Image 01',
-            question: 'Man02'
+            {
+            image: 'img/tpi_2.png',
+            question: 'Man02',
+            correct:2, //CorrectID
+            answer_a:1, //AnswerID
+            answer_d:2, //AnswerID
+            answer_ad: "alive", //Answer String
+            answer_dd: "dead" //Answer String
             },
-            {image: 'img/tpi_3.png',
-            description: 'Image 02',
-            question: 'Man03'
-            }
+
+            {
+            image: 'img/tpi_3.png',
+            question: 'Man03',
+            correct:1, //CorrectID
+            answer_a:1, //AnswerID
+            answer_d:2, //AnswerID
+            answer_ad: "alive", //Answer String
+            answer_dd: "dead" //Answer String
+          },
+
         ];
 
           //Defult Location
@@ -643,6 +582,86 @@ a01.controller('MainCtrl', function ($scope) {
           $scope.nextSlide = function () {
               $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
           };
+
+          //------------------
+          //Hard Questions Slider End
+
+
+          //------------------
+          //Hard Questions Controller Start
+
+
+          //irene testing
+          $scope.user=APP.user;
+          //end of irene testing
+
+          var question = quizservicehard.getquestion(parseInt($routeParams.questionId));
+
+          //Change Markup
+
+
+
+
+
+          $scope.answerquestionh = function(answerid, checking) {
+          console.log("Hard user answered with: " + answerid);
+          console.log("Hard CPU answered with: " + checking);
+
+                    //start of irene testing
+                  var isCorrect=false;
+                    //end of irene testing line
+
+                  //Check Answer if Correct
+                  if (answerid === checking)
+                  {
+
+                        //start of irene testing
+                        isCorrect=true;
+                        //end of irene testing line
+
+
+                  console.log("Correct");
+                  $rootScope.score =  $rootScope.score + 100;
+                  console.log("Hard Part 2 :" + $rootScope.score);
+                  $rootScope.used = $rootScope.used + 1;
+                  }
+
+                  else
+                  {
+                   console.log("In-Correct");
+                  $rootScope.score =  $rootScope.score + 0;
+                  console.log("Hard Part 2 :" + $rootScope.score);
+                     $rootScope.used = $rootScope.used + 1;
+                  }
+
+                  ///Next Question
+
+
+
+                  var nextQuestionId = parseInt($routeParams.questionId) + 1;
+
+                  $rootScope.answered = 1;
+                  $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+
+
+
+
+                    //start of irene testing
+                    //APP.scores.push({
+                    //  id:answerid, answer:answer, correct:isCorrect
+                    //})
+
+                    console.log(APP.scores);
+
+                   //end of irene testing line
+
+                };
+
+
+
+              //------------------
+              //Hard Questions Controller End
+
     });
 
 
