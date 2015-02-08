@@ -29,25 +29,30 @@
 
   <div class="imgq_questionContainer">
 
+    <h2>Question Number: {{hquestionnumber}}</h2>
+    <h3>{{hquestion}}</h3>
+
+    <div ng-controller="MainCtrl">
+      <!-- Debug Controls-->
+      <button ng-click="prevSlide()">Prev</button>
+      <button ng-click="nextSlide()">Next</button>
+
+      <!-- The Ask-->
+      <div class="container slider">
+        <div ng-repeat="slide in slides" class="slide" class="check-element animate-hide"
+        ng-hide="!isCurrentSlideIndex($index)">      <p>{{slide.question}}</p></div>
+
+        <!-- The Question-->
+      <img ng-repeat="slide in slides" class="slide" class="check-element animate-hide"
+          ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}" width="100%" alt="placeholder img" height="60%">
+
+      //The Options
+
+  </div>
+
+</div>
 
 
-    <div>
-        <h2>Question Number: {{hquestionnumber}}</h2>
-        <h3>{{hquestion}}</h3>
-        <img ng-src="{{hdeck}}" width="100%" alt="placeholder img" height="60%">
-
-        <a
-          ng-repeat="answer in answers"
-          style="display:block; color:blue"
-          ng-click="answerquestionh(answer.AnswerId, answer.Answer, check)">
-
-          <!-- Irene: added/change class name-->
-          <p class="answerBlock">{{answer.Answer}}</p>
-          <p class='hideID'>{{answer.AnswerId}}</p>
-          <p class='answerCheck'>{{hcheck}}</p>
-        </a>
-
-    </div>
 </div>
       </div>
 

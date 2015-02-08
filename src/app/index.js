@@ -2,7 +2,7 @@
   //------------------
   //Index.js Start
   //Angualr Start
-  var a01 = angular.module('iat381-a01', ['ngRoute', 'ngAnimate',]);
+  var a01 = angular.module('iat381-a01', ['ngRoute', 'ngAnimate']);
 
 
     a01.config(['$routeProvider',
@@ -512,7 +512,7 @@ $rootScope.questioncount = length12;
 
       a01.controller('questionscontrollerh', function($scope,$rootScope,$routeParams,$location, quizservicehard) {
 
-      $rootScope.pagechange = 1;
+      $rootScope.pagechange = 2;
       $rootScope.timing = 1;
       console.log("Time Gentlemen: " + $rootScope.timing + "Page Change: " + $rootScope.pagechange);
 
@@ -592,13 +592,61 @@ $rootScope.questioncount = length12;
 
 
 
-
-
-
       });
       //------------------
       //Hard Questions Controller End
 
+
+      //Slider Inspired by
+      //http://onehungrymind.com/build-sweet-photo-slider-angularjs-animate/
+      //Build Sweet Photo Slider With AngularJS Aniamte
+
+a01.controller('MainCtrl', function ($scope) {
+
+        //Slide Array: Questions + Options
+        $scope.slides = [
+            {image: 'img/tpi_1.png',
+            description: 'Image 00',
+            question: 'Man01'
+            },
+
+            {image: 'img/tpi_2.png',
+            description: 'Image 01',
+            question: 'Man02'
+            },
+            {image: 'img/tpi_3.png',
+            description: 'Image 02',
+            question: 'Man03'
+            }
+        ];
+
+          //Defult Location
+          $scope.currentIndex = 0;
+
+
+          //Set ng-Hide
+          $scope.setCurrentSlideIndex = function (index) {
+              $scope.currentIndex = index;
+          };
+
+          //Set ng-Hide
+          $scope.isCurrentSlideIndex = function (index) {
+              return $scope.currentIndex === index;
+          };
+
+          //Slide Control
+          $scope.prevSlide = function () {
+              $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+          };
+
+          //Slide Control
+          $scope.nextSlide = function () {
+              $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+          };
+    });
+
+
+//End Slide Control for Hard Questions
 
 
 
@@ -659,6 +707,7 @@ var timesup;
         console.log("New View at 0");
     } //Timer Disabled
 
+    //Time Control Q Easy and Medium
     else if ($rootScope.pagechange === 1)
     {
         startclock();
@@ -676,6 +725,8 @@ var timesup;
 
 
     }//Time Enabled
+
+
 
 
     function startclock()
