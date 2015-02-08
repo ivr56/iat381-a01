@@ -131,6 +131,7 @@ display: none;
 .imgq_button .sleft{
   position: absolute;
   left:0%;
+  top:50%;
    background-color: #f9f9f9;
   border: 1px #eee solid;
 
@@ -139,6 +140,7 @@ display: none;
 .imgq_button .sright{
   position: absolute;
   right:0%;
+   top:50%;
   background-color: #f9f9f9;
   border: 1px #eee solid;
 }
