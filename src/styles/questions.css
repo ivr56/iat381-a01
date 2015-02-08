@@ -148,3 +148,7 @@ display: none;
 h3{
   font-size: 18px !important;
 }
+
+h2 {
+	display: none !important;
+}
