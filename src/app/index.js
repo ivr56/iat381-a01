@@ -90,7 +90,7 @@
     //start of irene testing//
     //ADD any variables you want to access in all controllers to the APP variable
 
-    var APP = {};
+    var APP = {}
 
     APP.user = {
       name:'',
@@ -523,7 +523,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
             {
             image: 'img/hard/hard-tyrion.jpg',         //Image
             question: 'Tyrion Lannister',              //Question
-            questionID: 2, //QuestionID
+            questionID: 1, //QuestionID
             correct:1, //CorrectID
             answer_a:1, //AnswerID
             answer_d:2, //AnswerID
@@ -534,7 +534,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
             {
             image: 'img/hard/hard-jon.jpg',
             question: 'Jon Snow',
-            questionID: 1, //QuestionID
+            questionID: 2, //QuestionID
             correct:1, //CorrectID
             answer_a:1, //AnswerID
             answer_d:2, //AnswerID
@@ -594,7 +594,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
 
           //Slide Control
           $scope.prevSlide = function () {
-              $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+              $scope.currentIndex = ($scope.currentIndex < $scope.slides.length ) ? ++$scope.currentIndex : 0;
           };
 
           //Slide Control
@@ -667,7 +667,11 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                   console.log("Correct");
                   $rootScope.score =  $rootScope.score + 100;
                   console.log("Hard Part 2 :" + $rootScope.score);
+                   $rootScope.used = $rootScope.used + 1;
+                  if ($rootScope.used === 5){
 
+                    $scope.$emit('handleEmit_h', {message: 1});
+                   }
                   }
 
                   else
@@ -675,6 +679,14 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                    console.log("In-Correct");
                   $rootScope.score =  $rootScope.score + 0;
                   console.log("Hard Part 2 :" + $rootScope.score);
+                   $rootScope.used = $rootScope.used + 1;
+                   if ($rootScope.used === 5){
+
+                    $scope.$emit('handleEmit_h', {message: 1});
+                   }
+
+
+                   
 
 
                   }
@@ -686,8 +698,10 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                   var nextQuestionId = parseInt($routeParams.questionId) + 1;
 
                   $rootScope.answered = 1;
+                  
+                  console.log("Swap Count Answered :" + $rootScope.used);
                   $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
-                  $rootScope.used = $rootScope.used + 1;
+                  
                   console.log("Score Post Answer:" + $rootScope.score);
                   $scope.$emit('handleEmit_ha', {message: 1});
 
@@ -745,7 +759,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
 
     $scope.rs = function()
     {
-   $rootScope.quizset = Math.floor((Math.random() * 10) + 1);
+  
     console.log("Quiz Reset with #: " + $rootScope.quizset);
     $rootScope.used = 0;
     console.log("Correct Answers at: " + $rootScope.used);
@@ -863,9 +877,9 @@ else
      function startclockh()
         {
             console.log("Start Clock");
-            timesuph = setTimeout(callTimeouth, 190000);
+            timesuph = setTimeout(callTimeouth, 20000);
             console.log(timesuph);
-            $scope.counterh = 9000;
+            $scope.counterh = 20;
 
         }
 
