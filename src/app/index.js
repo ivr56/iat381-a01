@@ -169,6 +169,16 @@
     $scope.correct = $rootScope.corrected;
     $scope.finalscore = $rootScope.score/100;
 
+     $scope.scoreboardreset = function()
+    {
+   $rootScope.quizset = Math.floor((Math.random() * 10) + 1);
+    console.log("Quiz Reset with #: " + $rootScope.quizset);
+    $rootScope.used = 0;
+    console.log("Correct Answers at: " + $rootScope.used);
+    $rootScope.score = 0;
+    console.log("Reset");
+    }
+
   });
 
 
