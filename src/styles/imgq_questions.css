@@ -31,6 +31,7 @@ body {
  /*leave this, this centers answer block*/
   padding-left: 2%;
 
+
 }
 
 .imgq_answerBlock{
@@ -84,7 +85,7 @@ border: 1px solid #194775;
   margin-left: 5%;
   margin-right: 5%;
   position: relative;
-  top: 100px;
+  top: 50px;
   display: inline-block;
   height: 90%;
 
@@ -131,7 +132,7 @@ display: none;
 .imgq_button .sleft{
   position: absolute;
   left:0%;
-  top:50%;
+  bottom: 5%;
    background-color: #f9f9f9;
   border: 1px #eee solid;
    padding-top: 10px;
@@ -141,9 +142,17 @@ display: none;
 .imgq_button .sright{
   position: absolute;
   right:0%;
-   top:50%;
+  bottom: 5%;
   background-color: #f9f9f9;
   border: 1px #eee solid;
   padding-top: 10px;
 }
+.slide{
+  margin-bottom: 40px;
+  height: 60%;
+}
 
+#staybox{
+  display: inline-block;
+  height: 280px;
+}

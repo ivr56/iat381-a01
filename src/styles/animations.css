@@ -1,16 +1,20 @@
 
 /* when hiding the thing */
-.ng-hide-add         {
-  -webkit-animation:0.5s bounceInLeft ease;
-  animation:0.1s bounceInLeft ease;
+.ng-hide-add {
+
+  -webkit-animation:0.5s bounceOutLeft ease;
+  animation:0.1s bounceOutLeft ease;
 
 }
 
+
+
 /* when showing the thing */
-.ng-hide-remove      {
+.ng-hide-remove   {
  
-  -webkit-animation: 0.5s bounceOutRight ease;
-  animation: 0.5s bounceOutRight ease;
+  -webkit-animation: 0.2s bounceInRight ease;
+  animation: 0.2s bounceInRight ease;
+
    display: none;
  
 }
