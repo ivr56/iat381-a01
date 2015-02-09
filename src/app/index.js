@@ -686,7 +686,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                    }
 
 
-                   
+
 
 
                   }
@@ -698,10 +698,10 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                   var nextQuestionId = parseInt($routeParams.questionId) + 1;
 
                   $rootScope.answered = 1;
-                  
+
                   console.log("Swap Count Answered :" + $rootScope.used);
                   $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
-                  
+
                   console.log("Score Post Answer:" + $rootScope.score);
                   $scope.$emit('handleEmit_ha', {message: 1});
 
@@ -759,7 +759,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
 
     $scope.rs = function()
     {
-  
+
     console.log("Quiz Reset with #: " + $rootScope.quizset);
     $rootScope.used = 0;
     console.log("Correct Answers at: " + $rootScope.used);
@@ -877,15 +877,13 @@ else
      function startclockh()
         {
             console.log("Start Clock");
-<<<<<<< HEAD
             timesuph = setTimeout(callTimeouth, 10000);
             console.log(timesuph);
             $scope.counterh = 10;
-=======
             timesuph = setTimeout(callTimeouth, 20000);
             console.log(timesuph);
             $scope.counterh = 20;
->>>>>>> d1bf3103ac47deb5c45c60b9029620d14240a403
+
 
         }
 
