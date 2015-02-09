@@ -4,6 +4,7 @@
 var gulp = require('gulp');
 var subtree = require('gulp-subtree');
 var clean = require('gulp-clean');
+var deploy = requrie('gulp-gh-pages');
 
 gulp.paths = {
   src: 'src',
@@ -24,7 +25,7 @@ gulp.task('subtree', function () {
     .pipe(clean());
 });
 
-
-
-
-
+gulp.task('deploy', function() {
+  return gulp.src('./build-1006pm/**/*')
+  .pipe.deploy(options));
+});
