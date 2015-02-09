@@ -167,6 +167,7 @@
 
     $scope.scoring = $rootScope.score;
     $scope.correct = $rootScope.corrected;
+    $scope.finalscore = $rootScope.score/100;
 
   });
 
@@ -262,7 +263,7 @@ $rootScope.questioncount = length12;
       QuestionId:2,
       Question:"What is the name of the throne belonging to Balon Greyjoy?",
       CheckId: 1,
-      imgsrc: "img/ironislands.jpg",
+      imgsrc: "img/ironislands2.jpg",
       Answers: [
         {AnswerId:1, Answer:"The Seastone Chair"},
         {AnswerId:2, Answer:"The Iron Throne"},
