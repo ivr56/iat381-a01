@@ -91,9 +91,6 @@
   $rootScope.$on('handleEmit_ha', function(event, args) {
     $rootScope.$broadcast('handleBroadcast_ha', args);
 });
-  $rootScope.$on('handleEmit_time', function(event, args) {
-    $rootScope.$broadcast('handleBroadcast_time', args);
-});
   });
 
     //start of irene testing//
@@ -178,8 +175,6 @@
     $scope.correct = $rootScope.corrected;
     $scope.finalscore = $rootScope.score/100;
 
-
-
      $scope.scoreboardreset = function()
     {
    $rootScope.quizset = Math.floor((Math.random() * 10) + 1);
@@ -187,7 +182,6 @@
     $rootScope.used = 0;
     console.log("Correct Answers at: " + $rootScope.used);
     $rootScope.score = 0;
-    $scope.$emit('handleBroadcast_time', {message: 1});
     console.log("Reset");
     }
 
@@ -797,7 +791,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
     else if ($rootScope.pagechange === 1)
     {
         startclock();
-        $scope.counter = 20;
+        $scope.counter = 5;
 
 
 
@@ -818,7 +812,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
     function startclock()
        {
            console.log("Start Clock");
-           timesup = setTimeout(callTimeout, 20000);
+           timesup = setTimeout(callTimeout, 5000);
            console.log(timesup);
        }
 
@@ -862,9 +856,7 @@ else
      if ($rootScope.pagechange === 0)
      {
          console.log("New View at 0");
-     } 
-
-     //Timer Disabled
+     } //Timer Disabled
 
 
      else if ($rootScope.pagechange === 2)
@@ -894,29 +886,10 @@ else
             timesuph = setTimeout(callTimeouth, 10000);
             console.log(timesuph);
             $scope.counterh = 10;
-            timesuph = setTimeout(callTimeouth, 10000);
-            console.log(timesuph);
-
-            $scope.counterh = 10;
-
-
-
-            $scope.counterh = 20;
-
+          
         }
 
- $scope.$on('handleEmit_time', function(event, args) {
-        if (args.message === 1)
-            {
 
-             console.log("killed quiz");
-         $timeout.cancel(timesuph);
-
-            }
-
-
-
-        });
 
 
      function callTimeouth()
