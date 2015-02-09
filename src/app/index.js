@@ -15,6 +15,12 @@
               controller: 'resultcontroller'
             }).
 
+             //Hard Result Router
+            when('/resulth', {
+              templateUrl: 'resulth.html',
+              controller: 'resultcontroller'
+            }).
+
             //Easy + Medium Question Router
             when('/questions/:questionId', {
               templateUrl: 'questions.html',
@@ -625,7 +631,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
               if ($rootScope.used === 5)
               {
                 console.log("Quiz 3 Completed");
-                $location.path( '/result/' );
+                $location.path( '/resulth/' );
                 $rootScope.pagechange = 0;
               }
               else
