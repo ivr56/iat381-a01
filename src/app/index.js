@@ -877,15 +877,12 @@ else
      function startclockh()
         {
             console.log("Start Clock");
-<<<<<<< HEAD
             timesuph = setTimeout(callTimeouth, 10000);
             console.log(timesuph);
             $scope.counterh = 10;
-=======
             timesuph = setTimeout(callTimeouth, 20000);
             console.log(timesuph);
             $scope.counterh = 20;
->>>>>>> d1bf3103ac47deb5c45c60b9029620d14240a403
 
         }
 
