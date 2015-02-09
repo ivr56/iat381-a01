@@ -812,7 +812,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
     function startclock()
        {
            console.log("Start Clock");
-           timesup = setTimeout(callTimeout, 5000);
+           timesup = setTimeout(callTimeout, 20000);
            console.log(timesup);
        }
 
