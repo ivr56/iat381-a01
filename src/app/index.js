@@ -853,9 +853,9 @@ else
      function startclockh()
         {
             console.log("Start Clock");
-            timesuph = setTimeout(callTimeouth, 190000);
+            timesuph = setTimeout(callTimeouth, 10000);
             console.log(timesuph);
-            $scope.counterh = 9000;
+            $scope.counterh = 10;
 
         }
 
