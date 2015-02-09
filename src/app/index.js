@@ -907,33 +907,35 @@ else
       $scope.$on('handleBroadcast_popup', function(event, args)
       {
         //Correct Message to Popup
-        if (args.message === 1)
-        {
+        //if (args.message === 1)
+        //{
           $scope.msg = 'Answer Correct: +100 Points';
-          console.log("AC");
+          //console.log("AC");
           $scope.template = 'notify.html';
 
-        }
+        //}
 
         //In-Correct Message to Popup
-        else if (args.message === 2)
-        {
-          console.log("IC");
-          $scope.msg =  'Answer In-Correct: No Points';
-          $scope.template = 'notify.html';
+        //else if (args.message === 2)
+        //{
+          //console.log("IC");
+          //$scope.msg =  'Answer In-Correct: No Points';
+          //$scope.template = 'notify.html';
 
-        }
+        //}
 
         //Timeout
-        else if (args.message === 3)
-        {
-          console.log("TC");
-          $scope.msg =  'Timeout: No Points';
-          $scope.template = 'notify.html';
+        //else if (args.message === 3)
+        //{
+          //console.log("TC");
+          //$scope.msg =  'Timeout: No Points';
+          //$scope.template = 'notify.html';
 
-        }
+        //}
 });
 
+
+$scope.msg =  'Timeout: No Points';
       $scope.template = 'notify.html';
 
       $scope.demo = function(){
@@ -949,7 +951,7 @@ else
               message: $scope.msg,
               classes: $scope.classes,
               templateUrl: $scope.template
-              $scope.$emit('handleEmit_popup', {message: 0});
+            
           });
       };
 
