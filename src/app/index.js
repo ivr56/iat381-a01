@@ -890,8 +890,12 @@ else
             $scope.counterh = 10;
             timesuph = setTimeout(callTimeouth, 10000);
             console.log(timesuph);
+
             $scope.counterh = 10;
 
+
+
+            $scope.counterh = 20;
 
         }
 
