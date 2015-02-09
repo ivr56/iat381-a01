@@ -883,11 +883,6 @@ else
             timesuph = setTimeout(callTimeouth, 20000);
             console.log(timesuph);
             $scope.counterh = 20;
-<<<<<<< HEAD
-=======
-
->>>>>>> 877e4a8daf542c66d670a92c3219df1ff0dfaacc
-
         }
 
 
