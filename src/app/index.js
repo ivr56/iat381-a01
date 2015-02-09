@@ -2,7 +2,7 @@
   //------------------
   //Index.js Start
   //Angualr Start
-  var a01 = angular.module('iat381-a01', ['ngRoute', 'ngAnimate']);
+  var a01 = angular.module('iat381-a01', ['ngRoute', 'ngAnimate', 'cgNotify']);
 
 
     a01.config(['$routeProvider',
@@ -77,14 +77,20 @@
     $rootScope.activeresult = 0;
     $rootScope.questioncount = 0;
 
+
     //Global Variables for Hard Question Passthrough for Time + Page Control
     $rootScope.$on('handleEmit_h', function(event, args) {
       $rootScope.$broadcast('handleBroadcast_h', args);
   });
 
-  $rootScope.$on('handleEmit_ha', function(event, args) {
-    $rootScope.$broadcast('handleBroadcast_ha', args);
+
+//Emit  Message for PopUp
+$rootScope.$on('handleEmit_popup', function(event, args) {
+  $rootScope.$broadcast('handleBroadcast_popup', args);
 });
+
+
+
   });
 
     //start of irene testing//
@@ -401,13 +407,15 @@ $rootScope.questioncount = length12;
       $rootScope.score =  $rootScope.score + 100;
       console.log("Part 2 :" + $rootScope.score);
       $rootScope.used = $rootScope.used + 1;
+      $scope.$emit('handleEmit_popup', {message: 1});
       }
       else
       {
        console.log("In-Correct");
       $rootScope.score =  $rootScope.score + 0;
       console.log("Part 2 :" + $rootScope.score);
-         $rootScope.used = $rootScope.used + 1;
+      $rootScope.used = $rootScope.used + 1;
+      $scope.$emit('handleEmit_popup', {message: 2});
       }
       ///Next Question
 
@@ -618,6 +626,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                 $location.path( '/result/' );
                 $rootScope.pagechange = 0;
               }
+
               else
               {
                 $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
@@ -627,9 +636,6 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
               }
 
             }
-
-
-
         });
 
 
@@ -657,7 +663,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                   console.log("Correct");
                   $rootScope.score =  $rootScope.score + 100;
                   console.log("Hard Part 2 :" + $rootScope.score);
-
+                  $scope.$emit('handleEmit_popup', {message: 1});
                   }
 
                   else
@@ -665,7 +671,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                    console.log("In-Correct");
                   $rootScope.score =  $rootScope.score + 0;
                   console.log("Hard Part 2 :" + $rootScope.score);
-
+                  $scope.$emit('handleEmit_popup', {message: 2});
 
                   }
 
@@ -679,8 +685,12 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
                   $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
                   $rootScope.used = $rootScope.used + 1;
                   console.log("Score Post Answer:" + $rootScope.score);
-                  $scope.$emit('handleEmit_ha', {message: 1});
 
+
+
+
+                  notify('Testing Call'); // <-- Call notify with your message
+                  notify({ message:'Test', templateUrl:'notify.html'} );
 
                     //start of irene testing
                     //APP.scores.push({
@@ -790,7 +800,7 @@ a01.controller('questionscontrollerh', function ($scope,$rootScope,$routeParams,
     function callTimeout() {
    console.log("Timeout : Question Incorrect");
 var question = quizservice.getquestion(parseInt($routeParams.questionId));
-
+$scope.$emit('handleEmit_popup', {message: 3});
 var nextQuestionId = parseInt($routeParams.questionId) + 1;
 $rootScope.used = $rootScope.used + 1;
 
@@ -806,6 +816,7 @@ if ($rootScope.used === 5)
 }
 else
 {
+
   console.log("Cleared");
   $timeout.cancel(timesup);
 }
@@ -866,6 +877,7 @@ else
      {
      console.log("Hard Timeout : Question Incorrect");
 
+
      $rootScope.used = 5;
        if ($rootScope.used === 5 && doubleswap === 0)
        {
@@ -877,6 +889,7 @@ else
        {
          $scope.$emit('handleEmit_h', {message: 1});
          console.log("Cleared");
+         $scope.$emit('handleBroadcast_popup', {message: 1});
          $timeout.cancel(timesuph);
          startclockh();
        }
@@ -885,3 +898,81 @@ else
   });
   //End Easy Medium Time Controller
   //----------------
+
+
+
+      a01.controller('DemoCtrl',function($scope,notify){
+
+
+      $scope.$on('handleBroadcast_popup', function(event, args)
+      {
+        //Correct Message to Popup
+        if (args.message === 1)
+        {
+          $scope.msg = 'Answer Correct: +100 Points';
+          console.log("AC");
+          $scope.template = 'notify.html';
+
+        }
+
+        //In-Correct Message to Popup
+        else if (args.message === 2)
+        {
+          console.log("IC");
+          $scope.msg =  'Answer In-Correct: No Points';
+          $scope.template = 'notify.html';
+
+        }
+
+        //Timeout
+        else if (args.message === 3)
+        {
+          console.log("TC");
+          $scope.msg =  'Timeout: No Points';
+          $scope.template = 'notify.html';
+
+        }
+});
+
+      $scope.template = 'notify.html';
+
+      $scope.demo = function(){
+          notify({
+              message: $scope.msg,
+              classes: $scope.classes,
+              templateUrl: $scope.template
+          });
+      };
+
+      function poppop() {
+          notify({
+              message: $scope.msg,
+              classes: $scope.classes,
+              templateUrl: $scope.template
+              $scope.$emit('handleEmit_popup', {message: 0});
+          });
+      };
+
+      $scope.closeAll = function(){
+          notify.closeAll();
+      };
+
+      $scope.demoMessageTemplate = function(){
+
+          var messageTemplate = '<span>This is an example using a dynamically rendered Angular template for the message text. '+
+          'I can have <a href="" ng-click="clickedLink()">hyperlinks</a> with ng-click or any valid Angular enhanced html.</span>';
+
+          notify({
+              messageTemplate: messageTemplate,
+              classes: $scope.classes,
+              scope:$scope,
+              templateUrl: $scope.template
+          });
+
+      };
+
+      $scope.clickedLink = function(){
+          notify('You clicked a link!');
+      };
+
+  });

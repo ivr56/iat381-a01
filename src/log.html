@@ -1,15 +1,18 @@
 <div class="signuppg">
 	<div id="headtext">
 			<div class="jumbotron text-center">
-			<img src="img/whitelogoGOT.png" alt="logoGoT" width="80%"> 
+			<img src="img/whitelogoGOT.png" alt="logoGoT" width="80%">
 		</div>
 
-	</div>	
+	</div>
 
 
 <div class="difficultyselect">
 
-	
+	<div ng-controller="DemoCtrl">
+	<button ng-click="demo()">test notifcation</button>
+</div>
+
 <div class="difficultyBox" ng-controller="log_quizselect">
 
     <a class="logBtn" ng-href="#/q1" ng-click="easy()">Easy</a>
@@ -17,9 +20,5 @@
 	<a class="logBtn" ng-href="#/qh1" ng-click="hard()" >Hard</a>
 
 </div>
-	
+
 </div>
-
-
-
-

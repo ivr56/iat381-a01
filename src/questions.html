@@ -6,7 +6,7 @@
 
     </style>
 
-     
+
 </head>
 <body>
 <div class="q_bg">
@@ -47,14 +47,17 @@
         <a
           ng-repeat="answer in answers"
           style="display:block; color:blue"
-          ng-click="answerquestion(answer.AnswerId, answer.Answer, check)">
-
+          ng-click="answerquestion(answer.AnswerId, answer.Answer, check)"
+          >
           <!-- Irene: added/change class name-->
+          <div ng-controller="DemoCtrl">
           <p class="answerBlock">
              {{answer.Answer}}
           </p>
           <p class='hideID'>{{answer.AnswerId}}</p>
           <p class='answerCheck'>{{check}}</p>
+          </div>
+        
         </a>
       </div>
 </div>
